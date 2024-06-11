@@ -1,0 +1,242 @@
+@import url('reset.css');
+
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #F8F8F8;
+    }
+
+    h2{
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    h3{
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    h4{
+        font-size: 20px;
+    }
+
+    h5{
+        font-size: 16px;
+    }
+
+    h6{
+        font-size: 13px;
+        color: #7D7D7D;
+        font-weight: 400;
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    i{
+        margin-right: 4px;
+    }
+
+
+    .header{
+        background-color: #304296;
+        
+    }
+
+    .headerWrapper{
+        max-width: 1280px;
+        /* margin-left: calc((100vw - 1280px)/2); */
+        margin: 0 auto;
+        display: flex;
+        
+    }
+
+    .header img{
+        height: 50px;
+    }
+
+    .header a{
+        color: #fff;
+        display: flex;
+        text-decoration: none;
+    }
+
+    .main_wrapper{
+        width: 1280px;
+        margin: 0 auto;
+    }
+
+    .title{
+        color: #012064;
+        font-weight: bold;
+    }
+
+    .tickets > li{
+        display: flex;
+        background-color: #fff;
+        /* outline: 1px solid red; */
+        border-radius: 8px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.10) );
+        margin-bottom: 32px;
+    }
+
+    .info_wrapper{
+        /* width: 572px; */
+        padding: 66px 46px;
+        position: relative;
+        /* margin: auto; */
+    }
+
+    .flight_No{
+        display: flex;
+        position: absolute;
+        top: 18px;
+        left: 16px;
+    }
+    
+    .info{
+        color: #223F9A;
+        width: 480px;
+    }
+
+    .info div{
+        display: flex;
+    }
+
+    .info1{
+        /* width: 480px; */
+        /* flex-grow: 1; */ 
+    }
+
+
+    .line{
+        background-color: #7488C2;
+        border-radius: 3px;
+        margin: 4px 16px;
+        width: 100%;
+        height: 3px;
+   }
+
+   .tickets button{
+        width: 56px;
+        background: none;
+        /* border: none; */
+   }
+
+    .class{
+        display: flex;
+        /* width: 396px; */
+        
+    }
+
+    .class li{
+        width: 298px;
+        height: 187px;
+        color: white;
+        padding: 27px 24px;
+        box-sizing: border-box;
+        border-right: 2px solid #fff;
+        /* flex-basis:auto ; */
+    }
+
+    .class_wrapper > :first-child{
+        margin-bottom: 77px;
+    }
+
+    .priceFrom{
+        display: flex;
+        margin-bottom: 4px; 
+    }
+
+    .priceFrom h4{
+        margin-top: 7px;
+        margin-right: 6px;
+    }
+
+    .priceFrom h2{
+        margin-right: 6px;
+    }
+
+    .priceFrom h5{
+        margin-top: 8px;
+    }
+
+
+    .econ{
+        background-color: #223F9A;
+    }
+
+    .econPrem{
+        background-color: #012064;
+    }
+
+    .priceLine {
+        width: 100%;
+        height: 4px;
+        border-radius: 4px;
+        background-color: #fff;
+    }
+
+/* 票等細節 下拉視窗------------------------------------------------- */
+
+.colorBar{
+    width: 100%;
+    height: 16px;
+    background-color: #223F9A;
+}
+
+.levels{
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+    background-color: #fff;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.10));
+    display: flex;
+}
+
+.levels .top{
+    background-color: #DDE2F5;
+    color: #304296;
+    padding: 32px;
+}
+
+.top > :first-child{
+    margin-bottom: 16px;
+    font-weight: bold;
+    color: #061A3A;
+}
+
+.levelPrice{
+    display: flex;
+}
+
+.levels li{
+    flex-grow: 1;
+    outline: 1px solid #F1F6FF;
+}
+
+.level4 .top h5{
+    margin-bottom: 19px;
+}
+
+.level4 .compare{
+    height: 460px;
+    background-image: url('../img/business.png');
+    background-size:cover;
+    background-position: -150px;
+}
+
+.compare{
+    padding: 32px;
+}
+
+.compItem{
+    display: flex;
+    margin-bottom: 8px;
+    color: #7D7D7D;
+}
+
+.compare p{
+    margin-bottom: 32px;
+    padding: 0 20px;
+    color:#012064;
+}
