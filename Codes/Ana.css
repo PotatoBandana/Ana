@@ -37,7 +37,7 @@
         margin-right: 4px;
     }
 
-
+/* Header-------------------------------------- */
     .header{
         background-color: #304296;
         
@@ -55,12 +55,22 @@
         height: 50px;
     }
 
+    .buttons{
+        margin-left: auto;
+        display: flex;
+        margin: auto 0;
+        margin-left: auto;
+    }
+
     .header a{
         color: #fff;
         display: flex;
+        /* flex-grow: 1; */
         text-decoration: none;
+        margin-right: 16px;
     }
 
+    /* main------------------------------------ */
     .main_wrapper{
         width: 1280px;
         margin: 0 auto;
