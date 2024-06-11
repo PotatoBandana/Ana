@@ -37,6 +37,8 @@
         margin-right: 4px;
     }
 
+    
+
 /* Header-------------------------------------- */
     .header{
         background-color: #304296;
@@ -56,7 +58,6 @@
     }
 
     .buttons{
-        margin-left: auto;
         display: flex;
         margin: auto 0;
         margin-left: auto;
@@ -113,9 +114,9 @@
         display: flex;
     }
 
-    .info1{
+    .info1 > *{
         /* width: 480px; */
-        /* flex-grow: 1; */ 
+        flex-grow: 1; 
     }
 
 
@@ -230,7 +231,7 @@
 
 .level4 .compare{
     height: 460px;
-    background-image: url('../img/business.png');
+    background-image: url('/img/business.png');
     background-size:cover;
     background-position: -150px;
 }
@@ -243,6 +244,10 @@
     display: flex;
     margin-bottom: 8px;
     color: #7D7D7D;
+}
+
+.compItem h6{
+    margin-top: 3px;
 }
 
 .compare p{
