@@ -1,7 +1,7 @@
 @import url('reset.css');
 
     body{
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Inter', 'Noto Sans TC', Arial;
         background-color: #F8F8F8;
     }
 
@@ -35,12 +35,19 @@
 
     i{
         margin-right: 4px;
+        font-size: 16px;
+    }
+
+    svg{
+        margin-right: 4px;
+        font-size: 16px;
+        text-align: center;
     }
 
     
 
 /* Header-------------------------------------- */
-    .header{
+    header{
         background-color: #304296;
         
     }
@@ -53,7 +60,7 @@
         
     }
 
-    .header img{
+    header img{
         height: 50px;
     }
 
@@ -63,7 +70,7 @@
         margin-left: auto;
     }
 
-    .header a{
+    header a{
         color: #fff;
         display: flex;
         /* flex-grow: 1; */
@@ -71,38 +78,68 @@
         margin-right: 16px;
     }
 
+
+    .steps{
+        width: 544px;
+        height: 70px;
+        /* border: 2px solid#012064; */
+        overflow: hidden;
+        margin: 64px auto;
+    }
+
+    .steps img{
+        width: 100%;
+    }
+
     /* main------------------------------------ */
-    .main_wrapper{
+    .mainWrapper{
         width: 1280px;
         margin: 0 auto;
+        padding: 0 16px;
     }
 
-    .title{
+    .mainWrapper .title{
         color: #012064;
         font-weight: bold;
+        margin-bottom: 32px;
     }
 
+    .daySelect{
+        width: 100%;
+        height: 104px;
+        border-radius: 8px;
+        background-color: #fff;
+        margin:16px 0 32px 0;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.10) );
+    }
+
+    /* 航班 卡片---------------------------------------- */
     .tickets > li{
+        margin-bottom: 32px;
+    }
+
+    .tickets .card{
         display: flex;
         background-color: #fff;
         /* outline: 1px solid red; */
         border-radius: 8px;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.10) );
-        margin-bottom: 32px;
     }
 
-    .info_wrapper{
+    .infoWrapper{
         /* width: 572px; */
         padding: 66px 46px;
         position: relative;
+        cursor: pointer;
         /* margin: auto; */
     }
 
-    .flight_No{
+    .flightNo{
         display: flex;
         position: absolute;
         top: 18px;
         left: 16px;
+        color: #A1A1A1;
     }
     
     .info{
@@ -112,13 +149,20 @@
 
     .info div{
         display: flex;
+        justify-content: space-between;
     }
 
-    .info1 > *{
-        /* width: 480px; */
-        flex-grow: 1; 
+    .time{
+        color: #7488C2;
     }
 
+    .time h4{
+        color: #304296;
+    }
+
+    .info2{
+        align-items: flex-start;
+    }
 
     .line{
         background-color: #7488C2;
@@ -131,37 +175,38 @@
    .tickets button{
         width: 56px;
         background: none;
+        font-size: 20px;
+        color: #223F9A;
+        cursor: pointer;
         /* border: none; */
    }
 
     .class{
         display: flex;
-        /* width: 396px; */
+        width: 596px;
+        overflow: hidden;
+        /* flex-basis:content; */
         
     }
 
     .class li{
-        width: 298px;
+        min-width: 298px;
         height: 187px;
         color: white;
         padding: 27px 24px;
         box-sizing: border-box;
         border-right: 2px solid #fff;
-        /* flex-basis:auto ; */
+        cursor: pointer;
     }
 
-    .class_wrapper > :first-child{
+    .classWrapper > :first-child{
         margin-bottom: 77px;
     }
 
     .priceFrom{
         display: flex;
         margin-bottom: 4px; 
-    }
-
-    .priceFrom h4{
-        margin-top: 7px;
-        margin-right: 6px;
+        align-items: flex-end;
     }
 
     .priceFrom h2{
@@ -169,7 +214,7 @@
     }
 
     .priceFrom h5{
-        margin-top: 8px;
+        margin-right: 6px;
     }
 
 
@@ -179,6 +224,14 @@
 
     .econPrem{
         background-color: #012064;
+    }
+
+    .busi{
+        background-color: #B01F24;
+    }
+
+    .first{
+        background-color: #751B9F;
     }
 
     .priceLine {
@@ -194,15 +247,40 @@
     width: 100%;
     height: 16px;
     background-color: #223F9A;
+
+    /* display: none; */
 }
 
 .levels{
     width: 100%;
+    /* height: 610px; */
     border-radius: 0 0 8px 8px;
     background-color: #fff;
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.10));
-    display: flex;
+    /* display: flex; */
+
+    /* display: none; */
 }
+
+/* @media screen and (max-width: 1312px){
+
+    .levels{
+width: 60%;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+
+    .levels{
+width: 100%;
+    }
+} */
+
+
+/* .levels.hide{
+    display: none;
+} */
 
 .levels .top{
     background-color: #DDE2F5;
@@ -210,7 +288,7 @@
     padding: 32px;
 }
 
-.top > :first-child{
+.levels .top > :first-child{
     margin-bottom: 16px;
     font-weight: bold;
     color: #061A3A;
@@ -218,40 +296,198 @@
 
 .levelPrice{
     display: flex;
+    align-items: flex-end;
 }
 
 .levels li{
     flex-grow: 1;
     outline: 1px solid #F1F6FF;
+    min-width: 256px;
+    position: relative;
+    background-image: url('../img/plane-departure-solid.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 375px 281px;
+    background-position-y: 400px;
 }
 
-.level4 .top h5{
-    margin-bottom: 19px;
+.levels .level4 .top h5{
+    margin-bottom: 20px;
 }
 
 .level4 .compare{
-    height: 460px;
-    background-image: url('/img/business.png');
+    height: 496px;
+    background-image: url('../img/business.png');
     background-size:cover;
     background-position: -150px;
 }
 
 .compare{
     padding: 32px;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
 }
 
 .compItem{
     display: flex;
     margin-bottom: 8px;
     color: #7D7D7D;
+    align-items: flex-end;
 }
 
-.compItem h6{
-    margin-top: 3px;
+.compare .upgrade{
+    display: flex;
+    justify-content: space-between;
 }
 
 .compare p{
     margin-bottom: 32px;
-    padding: 0 20px;
+    padding: 0 18px;
     color:#012064;
+}
+
+.upgrade p{
+    margin-bottom: 8px;
+}
+
+/* 航班細節overlay-------------------------------- */
+
+.flightDetail{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    backdrop-filter: blur(1px);
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: none;
+}
+
+.flightDetail .popup{
+    width: 774px;
+    /* height: 326px; */
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 48px 44px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+}
+
+.popup > i {
+    position: absolute;
+    font-size: 32px;
+    color: #223F9A;
+    top: 8px;
+    right: 8px;
+    margin: 0;
+}
+
+.flightDetail .title{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: #012064;
+}
+
+.flightDetail .content{
+    background-color: #F1F6FF;
+    border-radius: 8px;
+    padding: 24px 34px 40px 34px;
+}
+
+.flightDetail .top{
+    display: flex;
+    margin-bottom: 38px;
+    color: #898989;
+    justify-content: space-between;
+}
+
+.flightDetail .airline{
+    display: flex;
+    font-weight: bold;
+    color: #012064;
+}
+
+.flightDetail img{
+    height: 16px;
+}
+
+.flightDetail .bottom{
+    display: flex;
+    margin: 0 auto;
+    /* width: 618px; */
+}
+
+.flightDetail .bottom div{
+    /* margin: 0 30px; */
+    flex-grow: 1;
+}
+
+.flightDetail .bottom h5{
+    color: #898989;
+}
+
+.flightDetail h2{
+    color: #223F9A;
+}
+
+.flightDetail .depart > :nth-child(2){
+    margin-bottom: 8px;
+}
+
+.flightDetail .arrive > :nth-child(2){
+    margin-bottom: 8px;
+}
+
+.flightDetail .trip{
+    margin-top: 12px;
+    flex-grow: 2;
+}
+
+.flightDetail .trip .time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.flightDetail .trip .line{
+    margin: 0;
+}
+
+.flightDetail .arrive{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+/* footer----------------------------------------- */
+footer{
+    background-color: #304296;
+
+}
+
+.footerWrapper{
+    display: flex;
+    margin: 0 auto;
+    max-width: 1280px;
+    height: 50px;
+    align-items: center;
+}
+
+footer img{
+    height: 30px;
+    margin-left: 16px;
+}
+
+footer h6{
+    color: #fff;
+    margin-left: auto;
+    margin-right: 16px;
 }

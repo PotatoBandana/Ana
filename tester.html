@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>訂票輸入框</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        .button {
+            border: 1px solid #000;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            user-select: none;
+        }
+        .number {
+            margin: 0 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <span>16 歲以上</span>
+    <div class="button" onclick="decrement()">-</div>
+    <span class="number" id="ticketNumber">1</span>
+    <div class="button" onclick="increment()">+</div>
+</div>
+
+<script>
+    function decrement() {
+        var numberElement = document.getElementById('ticketNumber');
+        var currentNumber = parseInt(numberElement.innerText);
+        if (currentNumber > 1) {
+            numberElement.innerText = currentNumber - 1;
+        }
+    }
+
+    function increment() {
+        var numberElement = document.getElementById('ticketNumber');
+        var currentNumber = parseInt(numberElement.innerText);
+        numberElement.innerText = currentNumber + 1;
+    }
+</script>
+
+</body>
+</html>

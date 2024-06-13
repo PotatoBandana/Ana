@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href='./Codes/Ana.css'>
+    <link rel="stylesheet" href='./Codes/Depart_rwd.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
     <!-- Header----------------------------------- -->
-    <div class="header">
+    <header>
         <div class="headerWrapper">
-            <img src="./img/ana-logo.png" alt="">
+            <a href="">
+                <img src="./img/ana-logo.png" alt="">
+            </a>
             <div class="buttons">
                 <a href="" class="help">
                     <i class="fa-solid fa-circle-question"></i>
@@ -24,238 +27,575 @@
                 </a>
             </div>
         </div>
-    </div>
+    </header>
 
 
 
 <!-- main----------------------------------------- -->
-    <div class="main_wrapper">
+    <div class="mainWrapper">
+        <div class="steps">
+            <img src="img/step1.png" alt="">
+        </div>
         <h3 class = 'title'>選擇去程</h3>
         <h5>顯示順序: 推薦</h5>
-        <div class="day_Select">
-
+        <div class="daySelect">
+            
         </div>
-
+        
+        <!-- 航班 卡片---------------------------- -->
         <ul class="tickets">
+            <!-- 卡1------------------------------ -->
             <li class="ticket1">
-                <div class="info_wrapper">
-                    <div class="flight_No">
-                        <i class="fa-solid fa-plane-departure"></i>
-                        <h5>NH852</h5>
-                    </div>
-                    <div class="info">
-                        <div class="info1">
-                            <h3>TPE</h3>
-                            <div class="time">
-                                <i class="fa-solid fa-clock"></i>
-                                <h4>3h 00m</h4>
+                <div class="card">
+                    <div class="infoWrapper">
+                        <div class="flightNo">
+                            <i class="fa-solid fa-plane"></i>
+                            <h5>NH852</h5>
+                        </div>
+                        <div class="info">
+                            <div class="info1">
+                                <h3>TPE</h3>
+                                <div class="time">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <h4>3h 00m</h4>
+                                </div>
+                                <h3>HND</h3>
                             </div>
-                            <h3>HND</h3>
-                        </div>
-                        <div class="info2">
-                            <h2>16:50</h2>
-                            <div class="line"></div>
-                            <h2>20:50</h2>
+                            <div class="info2">
+                                <h2>16:50</h2>
+                                <div class="line"></div>
+                                <h2>20:50</h2>
+                            </div>
                         </div>
                     </div>
+
+                    <button class="scrollLeft">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </button>
+
+                    <ul class="class">
+                        <li class="econ" id="t1Econ">
+                            <div class="classWrapper">
+                                <h2>經濟艙</h2>
+                                <div class="priceFrom">
+                                    <h5 class ='currency'>從</h5>
+                                    <h2 class ='number'>7,741</h2>
+                                    <h4>TWD</h4>
+                                </div>
+                                <div class="priceLine"></div>
+                            </div>                        
+                        </li>
+                        <li class="econPrem">
+                            <div class="classWrapper">
+                                <h2>豪華經濟艙</h2>
+                                <div class="priceFrom">
+                                    <h5 class ='currency'>從</h5>
+                                    <h2 class ='number'>9,527</h2>
+                                    <h4>TWD</h4>
+                                </div>
+                                <div class="priceLine"></div>
+                            </div>    
+                        </li>
+                        <li class="busi">
+                            <div class="classWrapper">
+                                <h2>商務艙</h2>
+                                <div class="priceFrom">
+                                    <h5 class ='currency'>從</h5>
+                                    <h2 class ='number'>9,527</h2>
+                                    <h4>TWD</h4>
+                                </div>
+                                <div class="priceLine"></div>
+                            </div>
+                        </li>
+                        <li class="first">
+                            <div class="classWrapper">
+                                <h2>商務艙</h2>
+                                <div class="priceFrom">
+                                    <h5 class ='currency'>從</h5>
+                                    <h2 class ='number'>9,527</h2>
+                                    <h4>TWD</h4>
+                                </div>
+                                <div class="priceLine"></div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <button class="scrollRight">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </button>
                 </div>
-
-                <button class="scroll_left">
-                    <i class="fa-solid fa-angle-left"></i>
-                </button>
-
-                <ul class="class">
-                    <li class="econ">
-                        <div class="class_wrapper">
-                            <h2>經濟艙</h2>
-                            <div class="priceFrom">
-                                <h4 class ='currency'>TWD</h4>
-                                <h2 class ='number'>7,741</h2>
-                                <h5>起</h5>
+                            <!-- 票等細節 下拉視窗 ------------------------------>
+                <div style="display: none;" class="colorBar" id="blue" ></div>
+                <ul style="display: none;" class="levels" id="t1EList">
+                    <li class="level1">
+                        <div class="top">
+                            <h5>Super Value</h5>
+                            <div class="levelPrice">
+                                <h2>7,471</h2>
+                                <h5>TWD</h5>
                             </div>
-                            <div class="priceLine"></div>
-                        </div>                        
-                    </li>
-                    <li class="econPrem">
-                        <div class="class_wrapper">
-                            <h2>經濟艙</h2>
-                            <div class="priceFrom">
-                                <h4 class ='currency'>TWD</h4>
-                                <h2 class ='number'>9,527</h2>
-                                <h5>起</h5>
+                        </div>
+                        <div class="compare">
+                            <div class="contentWrapper">
+                                <div class="compItem">
+                                    <i class="fa-solid fa-suitcase-rolling"></i>
+                                    <h6>免費行李</h6>
+                                </div>
+                                <p>2件 / 23公斤 (50磅) </p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-right-left"></i>
+                                    <h6>更改</h6>
+                                </div>
+                                <p>可以 (有手續費)</p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-plane-circle-xmark"></i>
+                                    <h6>退票</h6>
+                                </div>
+                                <p>不可以</p>
+                                <div class="compItem">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><path fill="currentColor" d="M224 232a8 8 0 0 1-8 8H112a8 8 0 0 1 0-16h104a8 8 0 0 1 8 8m-16-88h-64.22L112 80l14.19-26.32a1.5 1.5 0 0 0 .11-.22A16 16 0 0 0 119.15 32l-.47-.22L85 17.57a16 16 0 0 0-21.2 7.27l-22.12 44a16.1 16.1 0 0 0 0 14.32l58.11 116a15.93 15.93 0 0 0 14.32 8.84H208a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16"/></svg>
+                                    <h6>預選座位</h6>
+                                </div>
+                                <p>可以</p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-crown"></i>
+                                    <h6>貴賓室</h6>
+                                </div>
+                                <p>無法使用</p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-circle-up"></i>
+                                    <h6>升艙等</h6>
+                                </div>
+                                <div class="upgrade">
+                                    <p>豪華經濟艙:</p>
+                                    <p>無</p>
+                                </div>
+                                <div class="upgrade">
+                                    <p>商務艙:</p>
+                                    <p>無</p>
+                                </div>
                             </div>
-                            <div class="priceLine"></div>
-                        </div>    
+                        </div>
+
                     </li>
-                    <!-- <li class="buss"></li> -->
-                    <!-- <li class="first"></li> -->
+                    <li class="level2">
+                        <div class="top">
+                            <h5>Super Value</h5>
+                            <div class="levelPrice">
+                                <h2>7,471</h2>
+                                <h5>TWD</h5>
+                            </div>
+                        </div>
+                        <div class="compare">
+                            <div class="contentWrapper">
+                                <div class="compItem">
+                                    <i class="fa-solid fa-suitcase-rolling"></i>
+                                    <h6>免費行李</h6>
+                                </div>
+                                <p>2件 / 23公斤 (50磅) </p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-right-left"></i>
+                                    <h6>更改</h6>
+                                </div>
+                                <p>可以 (有手續費)</p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-plane-circle-xmark"></i>
+                                    <h6>退票</h6>
+                                </div>
+                                <p>不可以</p>
+                                <div class="compItem">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><path fill="currentColor" d="M224 232a8 8 0 0 1-8 8H112a8 8 0 0 1 0-16h104a8 8 0 0 1 8 8m-16-88h-64.22L112 80l14.19-26.32a1.5 1.5 0 0 0 .11-.22A16 16 0 0 0 119.15 32l-.47-.22L85 17.57a16 16 0 0 0-21.2 7.27l-22.12 44a16.1 16.1 0 0 0 0 14.32l58.11 116a15.93 15.93 0 0 0 14.32 8.84H208a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16"/></svg>
+                                    <h6>預選座位</h6>
+                                </div>
+                                <p>可以</p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-crown"></i>
+                                    <h6>貴賓室</h6>
+                                </div>
+                                <p>無法使用</p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-circle-up"></i>
+                                    <h6>升艙等</h6>
+                                </div>
+                                <div class="upgrade">
+                                    <p>豪華經濟艙:</p>
+                                    <p>無</p>
+                                </div>
+                                <div class="upgrade">
+                                    <p>商務艙:</p>
+                                    <p>無</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="level3">
+                        <div class="top">
+                            <h5>Super Value</h5>
+                            <div class="levelPrice">
+                                <h2>7,471</h2>
+                                <h5>TWD</h5>
+                            </div>
+                        </div>
+                        <div class="compare">
+                            <div class="contentWrapper">
+                                <div class="compItem">
+                                    <i class="fa-solid fa-suitcase-rolling"></i>
+                                    <h6>免費行李</h6>
+                                </div>
+                                <p>2件 / 23公斤 (50磅) </p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-right-left"></i>
+                                    <h6>更改</h6>
+                                </div>
+                                <p>可以 (有手續費)</p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-plane-circle-xmark"></i>
+                                    <h6>退票</h6>
+                                </div>
+                                <p>不可以</p>
+                                <div class="compItem">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><path fill="currentColor" d="M224 232a8 8 0 0 1-8 8H112a8 8 0 0 1 0-16h104a8 8 0 0 1 8 8m-16-88h-64.22L112 80l14.19-26.32a1.5 1.5 0 0 0 .11-.22A16 16 0 0 0 119.15 32l-.47-.22L85 17.57a16 16 0 0 0-21.2 7.27l-22.12 44a16.1 16.1 0 0 0 0 14.32l58.11 116a15.93 15.93 0 0 0 14.32 8.84H208a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16"/></svg>
+                                    <h6>預選座位</h6>
+                                </div>
+                                <p>可以</p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-crown"></i>
+                                    <h6>貴賓室</h6>
+                                </div>
+                                <p>無法使用</p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-circle-up"></i>
+                                    <h6>升艙等</h6>
+                                </div>
+                                <div class="upgrade">
+                                    <p>豪華經濟艙:</p>
+                                    <p>無</p>
+                                </div>
+                                <div class="upgrade">
+                                    <p>商務艙:</p>
+                                    <p>無</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="level4">
+                        <div class="top">
+                            <h5>商務艙</h5>
+                            <div class="price">
+                                <h3>享有更多空間</h3>
+                            </div>
+                        </div>
+                        <div class="compare"></div>
+                    </li>
                 </ul>
 
-                <button class="scroll_right">
-                    <i class="fa-solid fa-angle-right"></i>
-                </button>
+                
             </li>
 
-            <!-- 票等細節 下拉視窗 ------------------------------>
-            <div class="colorBar"></div>
-            <ul class="levels">
-                <li class="level1">
-                    <div class="top">
-                        <h5>Super Value</h5>
-                        <div class="levelPrice">
-                            <h2>7,471</h2>
-                            <h5>TWD</h5>
+            <!-- 卡2------------------------------ -->
+            <li class="ticket2">
+                <div class="card">
+                    <div class="infoWrapper">
+                        <div class="flightNo">
+                            <i class="fa-solid fa-plane"></i>
+                            <h5>NH852</h5>
+                        </div>
+                        <div class="info">
+                            <div class="info1">
+                                <h3>TPE</h3>
+                                <div class="time">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <h4>3h 00m</h4>
+                                </div>
+                                <h3>HND</h3>
+                            </div>
+                            <div class="info2">
+                                <h2>16:50</h2>
+                                <div class="line"></div>
+                                <h2>20:50</h2>
+                            </div>
                         </div>
                     </div>
-                    <div class="compare">
-                        <div class="contentWrapper">
-                            <div class="compItem">
-                                <i class="fa-solid fa-suitcase-rolling"></i>
-                                <h6>免費行李</h6>
-                            </div>
-                            <p>2件 / 23公斤 (50磅) </p>
-                            <div class="compItem">
-                                <i class="fa-solid fa-right-left"></i>
-                                <h6>更改</h6>
-                            </div>
-                            <p>可以 (有手續費)</p>
-                            <div class="compItem">
-                                <i class="fa-solid fa-plane-circle-xmark"></i>
-                                <h6>退票</h6>
-                            </div>
-                            <p>不可以</p>
-                            <div class="compItem">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><path fill="currentColor" d="M224 232a8 8 0 0 1-8 8H112a8 8 0 0 1 0-16h104a8 8 0 0 1 8 8m-16-88h-64.22L112 80l14.19-26.32a1.5 1.5 0 0 0 .11-.22A16 16 0 0 0 119.15 32l-.47-.22L85 17.57a16 16 0 0 0-21.2 7.27l-22.12 44a16.1 16.1 0 0 0 0 14.32l58.11 116a15.93 15.93 0 0 0 14.32 8.84H208a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16"/></svg>
-                                <h6>預選座位</h6>
-                            </div>
-                            <p>可以</p>
-                            <div class="compItem">
-                                <i class="fa-solid fa-crown"></i>
-                                <h6>貴賓室</h6>
-                            </div>
-                            <p>無法使用</p>
-                            <div class="compItem">
-                                <i class="fa-solid fa-circle-up"></i>
-                                <h6>升艙等</h6>
-                            </div>
-                            <p>豪華經濟艙:</p>
-                            <p>不可以</p>
-                            <p>商務艙:</p>
-                            <p>不可以</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="level2">
-                    <div class="top">
-                        <h5>Super Value</h5>
-                        <div class="levelPrice">
-                            <h2>7,471</h2>
-                            <h5>TWD</h5>
-                        </div>
-                    </div>
-                    <div class="compare">
-                        <div class="contentWrapper">
-                            <div class="compItem">
-                                <i class="fa-solid fa-suitcase-rolling"></i>
-                                <h6>免費行李</h6>
-                            </div>
-                            <p>2件 / 23公斤 (50磅) </p>
-                            <div class="compItem">
-                                <i class="fa-solid fa-right-left"></i>
-                                <h6>更改</h6>
-                            </div>
-                            <p>可以 (有手續費)</p>
-                            <div class="compItem">
-                                <i class="fa-solid fa-plane-circle-xmark"></i>
-                                <h6>退票</h6>
-                            </div>
-                            <p>不可以</p>
-                            <div class="compItem">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><path fill="currentColor" d="M224 232a8 8 0 0 1-8 8H112a8 8 0 0 1 0-16h104a8 8 0 0 1 8 8m-16-88h-64.22L112 80l14.19-26.32a1.5 1.5 0 0 0 .11-.22A16 16 0 0 0 119.15 32l-.47-.22L85 17.57a16 16 0 0 0-21.2 7.27l-22.12 44a16.1 16.1 0 0 0 0 14.32l58.11 116a15.93 15.93 0 0 0 14.32 8.84H208a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16"/></svg>
-                                <h6>預選座位</h6>
-                            </div>
-                            <p>可以</p>
-                            <div class="compItem">
-                                <i class="fa-solid fa-crown"></i>
-                                <h6>貴賓室</h6>
-                            </div>
-                            <p>無法使用</p>
-                            <div class="compItem">
-                                <i class="fa-solid fa-circle-up"></i>
-                                <h6>升艙等</h6>
-                            </div>
-                            <p>豪華經濟艙:</p>
-                            <p>不可以</p>
-                            <p>商務艙:</p>
-                            <p>不可以</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="level3">
-                    <div class="top">
-                        <h5>Super Value</h5>
-                        <div class="levelPrice">
-                            <h2>7,471</h2>
-                            <h5>TWD</h5>
-                        </div>
-                    </div>
-                    <div class="compare">
-                        <div class="contentWrapper">
-                            <div class="compItem">
-                                <i class="fa-solid fa-suitcase-rolling"></i>
-                                <h6>免費行李</h6>
-                            </div>
-                            <p>2件 / 23公斤 (50磅) </p>
-                            <div class="compItem">
-                                <i class="fa-solid fa-right-left"></i>
-                                <h6>更改</h6>
-                            </div>
-                            <p>可以 (有手續費)</p>
-                            <div class="compItem">
-                                <i class="fa-solid fa-plane-circle-xmark"></i>
-                                <h6>退票</h6>
-                            </div>
-                            <p>不可以</p>
-                            <div class="compItem">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><path fill="currentColor" d="M224 232a8 8 0 0 1-8 8H112a8 8 0 0 1 0-16h104a8 8 0 0 1 8 8m-16-88h-64.22L112 80l14.19-26.32a1.5 1.5 0 0 0 .11-.22A16 16 0 0 0 119.15 32l-.47-.22L85 17.57a16 16 0 0 0-21.2 7.27l-22.12 44a16.1 16.1 0 0 0 0 14.32l58.11 116a15.93 15.93 0 0 0 14.32 8.84H208a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16"/></svg>
-                                <h6>預選座位</h6>
-                            </div>
-                            <p>可以</p>
-                            <div class="compItem">
-                                <i class="fa-solid fa-crown"></i>
-                                <h6>貴賓室</h6>
-                            </div>
-                            <p>無法使用</p>
-                            <div class="compItem">
-                                <i class="fa-solid fa-circle-up"></i>
-                                <h6>升艙等</h6>
-                            </div>
-                            <p>豪華經濟艙:</p>
-                            <p>不可以</p>
-                            <p>商務艙:</p>
-                            <p>不可以</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="level4">
-                    <div class="top">
-                        <h5>商務艙</h5>
-                        <div class="price">
-                            <h3>享有更多空間</h3>
-                        </div>
-                    </div>
-                    <div class="compare">
-                        
-                    </div>
-                </li>
-            </ul>
 
+                    <button class="scrollLeft">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </button>
 
+                    <ul class="class">
+                        <li class="econ" id="t2Econ">
+                            <div class="classWrapper">
+                                <h2>經濟艙</h2>
+                                <div class="priceFrom">
+                                    <h5 class ='currency'>從</h5>
+                                    <h2 class ='number'>7,741</h2>
+                                    <h4>TWD</h4>
+                                </div>
+                                <div class="priceLine"></div>
+                            </div>                        
+                        </li>
+                        <li class="econPrem">
+                            <div class="classWrapper">
+                                <h2>豪華經濟艙</h2>
+                                <div class="priceFrom">
+                                    <h5 class ='currency'>從</h5>
+                                    <h2 class ='number'>9,527</h2>
+                                    <h4>TWD</h4>
+                                </div>
+                                <div class="priceLine"></div>
+                            </div>    
+                        </li>
+                        <li class="busi">
+                            <div class="classWrapper">
+                                <h2>商務艙</h2>
+                                <div class="priceFrom">
+                                    <h5 class ='currency'>從</h5>
+                                    <h2 class ='number'>9,527</h2>
+                                    <h4>TWD</h4>
+                                </div>
+                                <div class="priceLine"></div>
+                            </div>
+                        </li>
+                        <li class="first">
+                            <div class="classWrapper">
+                                <h2>商務艙</h2>
+                                <div class="priceFrom">
+                                    <h5 class ='currency'>從</h5>
+                                    <h2 class ='number'>9,527</h2>
+                                    <h4>TWD</h4>
+                                </div>
+                                <div class="priceLine"></div>
+                            </div>
+                        </li>
+                    </ul>
 
+                    <button class="scrollRight">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+                            <!-- 票等細節 下拉視窗 ------------------------------>
+                <div style='display: none;' class="colorBar"></div>
+                <ul style='display: none;' class="levels" id="t2EList">
+                    <li class="level1">
+                        <div class="top">
+                            <h5>Super Value</h5>
+                            <div class="levelPrice">
+                                <h2>7,471</h2>
+                                <h5>TWD</h5>
+                            </div>
+                        </div>
+                        <div class="compare">
+                            <div class="contentWrapper">
+                                <div class="compItem">
+                                    <i class="fa-solid fa-suitcase-rolling"></i>
+                                    <h6>免費行李</h6>
+                                </div>
+                                <p>2件 / 23公斤 (50磅) </p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-right-left"></i>
+                                    <h6>更改</h6>
+                                </div>
+                                <p>可以 (有手續費)</p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-plane-circle-xmark"></i>
+                                    <h6>退票</h6>
+                                </div>
+                                <p>不可以</p>
+                                <div class="compItem">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><path fill="currentColor" d="M224 232a8 8 0 0 1-8 8H112a8 8 0 0 1 0-16h104a8 8 0 0 1 8 8m-16-88h-64.22L112 80l14.19-26.32a1.5 1.5 0 0 0 .11-.22A16 16 0 0 0 119.15 32l-.47-.22L85 17.57a16 16 0 0 0-21.2 7.27l-22.12 44a16.1 16.1 0 0 0 0 14.32l58.11 116a15.93 15.93 0 0 0 14.32 8.84H208a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16"/></svg>
+                                    <h6>預選座位</h6>
+                                </div>
+                                <p>可以</p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-crown"></i>
+                                    <h6>貴賓室</h6>
+                                </div>
+                                <p>無法使用</p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-circle-up"></i>
+                                    <h6>升艙等</h6>
+                                </div>
+                                <div class="upgrade">
+                                    <p>豪華經濟艙:</p>
+                                    <p>無</p>
+                                </div>
+                                <div class="upgrade">
+                                    <p>商務艙:</p>
+                                    <p>無</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="level2">
+                        <div class="top">
+                            <h5>Super Value</h5>
+                            <div class="levelPrice">
+                                <h2>7,471</h2>
+                                <h5>TWD</h5>
+                            </div>
+                        </div>
+                        <div class="compare">
+                            <div class="contentWrapper">
+                                <div class="compItem">
+                                    <i class="fa-solid fa-suitcase-rolling"></i>
+                                    <h6>免費行李</h6>
+                                </div>
+                                <p>2件 / 23公斤 (50磅) </p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-right-left"></i>
+                                    <h6>更改</h6>
+                                </div>
+                                <p>可以 (有手續費)</p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-plane-circle-xmark"></i>
+                                    <h6>退票</h6>
+                                </div>
+                                <p>不可以</p>
+                                <div class="compItem">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><path fill="currentColor" d="M224 232a8 8 0 0 1-8 8H112a8 8 0 0 1 0-16h104a8 8 0 0 1 8 8m-16-88h-64.22L112 80l14.19-26.32a1.5 1.5 0 0 0 .11-.22A16 16 0 0 0 119.15 32l-.47-.22L85 17.57a16 16 0 0 0-21.2 7.27l-22.12 44a16.1 16.1 0 0 0 0 14.32l58.11 116a15.93 15.93 0 0 0 14.32 8.84H208a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16"/></svg>
+                                    <h6>預選座位</h6>
+                                </div>
+                                <p>可以</p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-crown"></i>
+                                    <h6>貴賓室</h6>
+                                </div>
+                                <p>無法使用</p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-circle-up"></i>
+                                    <h6>升艙等</h6>
+                                </div>
+                                <div class="upgrade">
+                                    <p>豪華經濟艙:</p>
+                                    <p>無</p>
+                                </div>
+                                <div class="upgrade">
+                                    <p>商務艙:</p>
+                                    <p>無</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="level3">
+                        <div class="top">
+                            <h5>Super Value</h5>
+                            <div class="levelPrice">
+                                <h2>7,471</h2>
+                                <h5>TWD</h5>
+                            </div>
+                        </div>
+                        <div class="compare">
+                            <div class="contentWrapper">
+                                <div class="compItem">
+                                    <i class="fa-solid fa-suitcase-rolling"></i>
+                                    <h6>免費行李</h6>
+                                </div>
+                                <p>2件 / 23公斤 (50磅) </p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-right-left"></i>
+                                    <h6>更改</h6>
+                                </div>
+                                <p>可以 (有手續費)</p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-plane-circle-xmark"></i>
+                                    <h6>退票</h6>
+                                </div>
+                                <p>不可以</p>
+                                <div class="compItem">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><path fill="currentColor" d="M224 232a8 8 0 0 1-8 8H112a8 8 0 0 1 0-16h104a8 8 0 0 1 8 8m-16-88h-64.22L112 80l14.19-26.32a1.5 1.5 0 0 0 .11-.22A16 16 0 0 0 119.15 32l-.47-.22L85 17.57a16 16 0 0 0-21.2 7.27l-22.12 44a16.1 16.1 0 0 0 0 14.32l58.11 116a15.93 15.93 0 0 0 14.32 8.84H208a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16"/></svg>
+                                    <h6>預選座位</h6>
+                                </div>
+                                <p>可以</p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-crown"></i>
+                                    <h6>貴賓室</h6>
+                                </div>
+                                <p>無法使用</p>
+                                <div class="compItem">
+                                    <i class="fa-solid fa-circle-up"></i>
+                                    <h6>升艙等</h6>
+                                </div>
+                                <div class="upgrade">
+                                    <p>豪華經濟艙:</p>
+                                    <p>無</p>
+                                </div>
+                                <div class="upgrade">
+                                    <p>商務艙:</p>
+                                    <p>無</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="level4">
+                        <div class="top">
+                            <h5>商務艙</h5>
+                            <div class="price">
+                                <h3>享有更多空間</h3>
+                            </div>
+                        </div>
+                        <div class="compare"></div>
+                    </li>
+                </ul>
+
+                
+            </li>
+        
         </ul>
-
-
-
     </div>
+
+    <!-- 航班細節overlay -->
+    <div class="flightDetail">
+        <div class="popup">
+            <i class="fa-solid fa-circle-xmark"></i>
+            <div class="title">
+                <h3>NH852</h3>
+                <h5>出發時間:2024年6月1日星期六</h5>
+            </div>
+            <div class="content">
+                <div class="top">
+                    <div class="airline">
+                        <h5>全日本航空</h5>
+                        <img src="img/AnaTail.png" alt="">
+                    </div>
+                    <h5>波音787-8</h5>
+                </div>
+                <div class="bottom">
+                    <div class="depart">
+                        <h2>16:50</h2>
+                        <h2>台北</h2>
+                        <h5>台北松山機場</h5>
+                    </div>
+                    <div class="trip">
+                        <div class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            <h4>3h 00m</h4>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="arrive">
+                        <h2>20:50</h2>
+                        <h2>東京</h2>
+                        <h5>東京成田機場</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer-------------------------------------- -->
+    <footer>
+        <div class="footerWrapper">
+            <a href=""><img src="img/star_alli.png" alt=""></a>
+            <h6>Copyright © ANA. All rights reserved.</h6>
+        </div>
+    </footer>
+
+    <script src="./Codes/Depart.js"></script>
+
+
+
+
+
 </body>
 </html>

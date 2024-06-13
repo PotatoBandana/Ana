@@ -1,0 +1,56 @@
+@media screen and (max-width: 1027px){
+    .levels{
+        overflow: hidden;
+    }
+
+    .infoWrapper{
+        padding: 66px 4.4vw;
+    }
+
+    /* .classWrapper > :first-child{
+        margin-bottom: 49px;
+    }*/
+
+    .class li{
+        min-width: 100%;
+    }
+
+    .info{
+        width: 50vw;
+    }
+
+    .flightDetail .popup{
+        width: 75vw;
+    }
+
+}
+
+@media screen and (max-width: 700px){
+
+    .steps{
+        width: 79vw;
+    }
+    
+    button{
+        height: 27vw;
+    }
+
+    .class li{
+        height: 27vw;
+    }
+    /* h2{
+        font-size: 20px;
+    }
+
+    h3{
+        font-size: 16px;
+    } */
+
+}
+
+@media screen and (max-width: 393px){
+    .steps{
+        /* width: 12vw; */
+    }
+}
+    
