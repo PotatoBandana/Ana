@@ -44,6 +44,12 @@
         text-align: center;
     }
 
+    button{
+        background: none;
+        cursor: pointer;
+        border: none;
+    }
+
     
 
 /* Header-------------------------------------- */
@@ -64,7 +70,7 @@
         height: 50px;
     }
 
-    .buttons{
+    .user{
         display: flex;
         margin: auto 0;
         margin-left: auto;
@@ -104,16 +110,54 @@
         margin-bottom: 32px;
     }
 
-    .daySelect{
+    /* 選天----------------------------------- */
+    .daySel{
         width: 100%;
         height: 104px;
         border-radius: 8px;
         background-color: #fff;
         margin:16px 0 32px 0;
+        display: flex;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.10) );
     }
 
+    .daySel button{
+        min-width: 56px;
+        padding: 0;
+    }
+    .dayWrapper{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        padding: 9px 0;
+        box-sizing: border-box; 
+    }
+
+    .dayWrapper li{
+        /* background-color: red; */
+        color: #7D7D7D;
+        min-width: 160px;
+        height: 100%;
+        text-align: center;
+        padding: 22px 0;
+        box-sizing: border-box;
+        border-radius: 8px;
+        flex-grow: 1;
+    }
+
+    .dayWrapper li:nth-child(4){
+        background-color:#DDE2F5;
+        color: #223F9A;
+        font-weight: bold;
+    }
+    
+    .dayWrapper h4{
+        margin-bottom: 8px;
+    }
+
     /* 航班 卡片---------------------------------------- */
+    
     .tickets > li{
         margin-bottom: 32px;
     }
@@ -172,24 +216,28 @@
         height: 3px;
    }
 
+   /* 艙等按鈕------------------------------------ */
    .tickets button{
-        width: 56px;
-        background: none;
-        font-size: 20px;
+        min-width: 56px;
+        /* background: none; */
         color: #223F9A;
-        cursor: pointer;
+        /* cursor: pointer; */
         /* border: none; */
    }
 
-    .class{
-        display: flex;
+   /* 艙等選擇------------------------------------ */
+    .class{ 
         width: 596px;
         overflow: hidden;
         /* flex-basis:content; */
-        
     }
 
-    .class li{
+    .classSel{
+        display: flex;
+        position: relative;
+    }
+
+    .classSel li{
         min-width: 298px;
         height: 187px;
         color: white;
@@ -209,6 +257,11 @@
         align-items: flex-end;
     }
 
+    .price{
+        display: flex;
+        align-items: flex-end;
+    }
+
     .priceFrom h2{
         margin-right: 6px;
     }
@@ -216,7 +269,6 @@
     .priceFrom h5{
         margin-right: 6px;
     }
-
 
     .econ{
         background-color: #223F9A;
@@ -254,12 +306,9 @@
 .levels{
     width: 100%;
     /* height: 610px; */
-    border-radius: 0 0 8px 8px;
     background-color: #fff;
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.10));
-    /* display: flex; */
-
-    /* display: none; */
+    display: flex;
 }
 
 /* @media screen and (max-width: 1312px){
@@ -311,6 +360,7 @@ width: 100%;
     background-position-y: 400px;
 }
 
+
 .levels .level4 .top h5{
     margin-bottom: 20px;
 }
@@ -320,6 +370,7 @@ width: 100%;
     background-image: url('../img/business.png');
     background-size:cover;
     background-position: -150px;
+    /* border-radius: 0 0 8px 0; */
 }
 
 .compare{
@@ -470,7 +521,6 @@ width: 100%;
 /* footer----------------------------------------- */
 footer{
     background-color: #304296;
-
 }
 
 .footerWrapper{

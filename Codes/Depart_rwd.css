@@ -1,3 +1,18 @@
+@media screen and (max-width: 1312px){
+
+    .mainWrapper{
+        width: auto;
+    }
+
+    .info{
+        width: 36.5vw;
+    }
+
+    .class li{
+        min-width: 50%;
+    }
+}
+
 @media screen and (max-width: 1027px){
     .levels{
         overflow: hidden;
@@ -16,7 +31,7 @@
     }
 
     .info{
-        width: 50vw;
+        width: 40vw;
     }
 
     .flightDetail .popup{
@@ -29,22 +44,76 @@
 
     .steps{
         width: 79vw;
+        height: 10vw;
+        margin: 9vw auto;
     }
     
-    button{
-        height: 27vw;
+    .info{
+        width: 50vw;
     }
 
     .class li{
-        height: 27vw;
+        /* height: 27vw; */
+        height: 120px;
     }
-    /* h2{
+    h2{
         font-size: 20px;
     }
 
     h3{
         font-size: 16px;
-    } */
+    }
+
+    h5{
+        font-size: 14px;
+    }
+
+    h6{
+        font-size: 12px;
+    }
+
+    .tickets .time{
+        display: none;
+    }
+
+    .tickets button{
+        min-width: 38px;
+        height: 120px;
+        display: none;
+    }
+
+    .classSel li{
+        padding: 19px 12px;
+    }
+
+    .classWrapper > :first-child{
+        margin-bottom: 32px;
+    }
+
+    .priceFrom{
+        display: block;
+    }
+
+    .priceLine{
+        display: none;
+    }
+
+    .infoWrapper{
+    padding: 42px 9px;
+    }
+
+    .daySel{
+        height: 90px;
+    }
+
+    .dayWrapper li{
+        padding: 16px 0;
+    }
+
+    footer img{
+        height: 20px;
+    }
+    
 
 }
 
