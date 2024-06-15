@@ -95,7 +95,7 @@
 
     .steps{
         width: 544px;
-        height: 70px;
+        height: 75px;
         /* border: 2px solid#012064; */
         overflow: hidden;
         margin: 64px auto;
@@ -124,6 +124,7 @@
         margin-bottom: 16px;
         background-color: #fff;
         border-radius: 16px;
+        padding: 0 32px;
         padding-top: 96px;
         display: flex;
         justify-content: center;
@@ -159,7 +160,6 @@
         box-sizing: border-box;
         padding-left: 8px;
         margin-right: 16px;
-        gap: 8px;
         margin-bottom: 48px;
         outline: 1px solid #B5C3F5;
     }
@@ -171,7 +171,8 @@
         border-radius: 8px;
         border: none;
         padding: 0 8PX;
-        margin-right: 8px;
+        box-sizing: border-box;
+        margin-right: 12px;
         outline: 1px solid #B5C3F5;
     }
 

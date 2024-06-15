@@ -38,9 +38,9 @@ window.onload = function(){
         shift = 0;
         $('.classSel').animate({'left': 0}, 500);
         stop(true. false)
-      }
-      updateVW();
-      $(window).resize(updateVW);
+    }
+    updateVW();
+    $(window).resize(updateVW);
 
     //艙等左右滑動選擇----------------------------------
     
@@ -49,7 +49,7 @@ window.onload = function(){
         if(VW >1027){
             if (count <= 1){
                 count++;
-                var po = $('#t' + N + 'EconP').position().left;
+                var po = $('#t' + N + 'P').position().left;
                 shift = shift - po
 
                 $('.classSel').animate({'left': shift}, 500);
@@ -59,7 +59,7 @@ window.onload = function(){
             var N = $(this).attr('id').substr(1, 1);
             if (count <= 2){
                 count++;
-                var po = $('#t' + N + 'EconP').position().left;
+                var po = $('#t' + N + 'P').position().left;
                 shift = shift - po
             
                 $('.classSel').animate({'left': shift}, 500);
@@ -68,36 +68,70 @@ window.onload = function(){
         }            
     })
 
-        $('.scrollLeft').click(function(){
+    $('.scrollLeft').click(function(){
+        var N = $(this).attr('id').substr(1, 1);
+        if(VW >1027){
+            if (count > 0){
+                count--;
+                var po = $('#t' + N + 'P').position().left;
+                shift = shift + po
+
+                $('.classSel').animate({'left': shift}, 500);
+                // console.log(po);
+            }
+        }else{
             var N = $(this).attr('id').substr(1, 1);
-            if(VW >1027){
-                if (count > 0){
-                    count--;
-                    var po = $('#t' + N + 'EconP').position().left;
-                    shift = shift + po
-
-                    $('.classSel').animate({'left': shift}, 500);
-                    // console.log(po);
-                }
-            }else{
-                var N = $(this).attr('id').substr(1, 1);
-                if (count > 0){
-                    count--;
-                    var po = $('#t' + N + 'EconP').position().left;
-                    shift = shift + po
+            if (count > 0){
+                count--;
+                var po = $('#t' + N + 'P').position().left;
+                shift = shift + po
             
-                    $('.classSel').animate({'left': shift}, 500);
-                            // console.log(po);
-                }
-            }    
-        })
-
-    $(function(){
-        $('#t1Econ').click(function(){
-        $('#t1EList').slideToggle();
-        })
+                $('.classSel').animate({'left': shift}, 500);
+                        // console.log(po);
+            }
+        }    
     })
 
+    $('#tab2').click(function(){
+        if (count <= 0){
+            count++;
+            var po = $('#t1EconP').position().left;
+            shift = shift - po
+
+            $('.classSel').animate({'left': shift}, 500);
+            $(this).css({'background-color': '#DDE2F5', 'color': '#012064'});
+            $('#tab1').css({'background-color': 'white'});
+        }
+        
+    })
+
+    $('#tab1').click(function(){
+        if (count > 0){
+            count--;
+            var po = $('#t1EconP').position().left;
+            shift = shift + po
+
+            $('.classSel').animate({'left': shift}, 500);
+            $(this).css({'background-color': '#DDE2F5'});
+            $('#tab2').css({'background-color': 'white'});
+        }
+        
+    })
+
+
+
+//點擊艙等展開清單------------------------------------------
+    
+    $('.classSel > li').click(function(){
+        var target = '#' + $(this).attr('id').substr(0, 3) + 'List';
+        $('.levelWrapper').not(target).slideUp();
+        setTimeout(function(){
+            $(target).slideToggle(400, function() {});
+        }, 400);
+        console.log(target);
+    })
+        
+ // 航班細節popup-------------------------------------
     $('.infoWrapper').click(function(){
         $('.flightDetail').css('display', 'block');
         
@@ -106,6 +140,16 @@ window.onload = function(){
     $('.flightDetail').click(function(){
         $(this).css('display', 'none')
     })
+
+    $('.fa-circle-xmark').click(function(){
+        $(this).closest('.flightDetail').css('display', 'none');
+    });
+
+    $('.popup').click(function(e){
+        e.stopPropagation()
+        console.log(e.eventPhase);
+    })
+
 }
 
 

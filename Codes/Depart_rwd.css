@@ -39,7 +39,6 @@
     .flightDetail .popup{
         width: 75vw;
     }
-
 }
 
 @media screen and (max-width: 700px){
@@ -70,7 +69,7 @@
     .steps{
         width: 79vw;
         height: 10vw;
-        margin: 9vw auto;
+        margin: 70px auto 36px auto;
     }
     
     .title{
@@ -79,6 +78,15 @@
 
     .info{
         width: 50vw;
+    }
+
+    .flightNo{
+        top: 9px;
+        left: 7px;
+    }
+
+    .flightNo i{
+        font-size: 14px;
     }
 
     .class li{
@@ -103,7 +111,14 @@
     }
 
     h6{
-        font-size: 12px;
+        font-size: 10px;
+    }
+    .classMobile{
+        display: block;
+    }
+
+    .tickets > li{
+        margin-bottom: 16px;
     }
 
     .tickets .time{
@@ -148,8 +163,9 @@
         height: 20px;
     }
 
-    .content{
+    .flightDetail .content{
         padding: 16px;
+        padding-bottom: 36px;
     }
 
     .flightDetail .bottom{
@@ -159,9 +175,9 @@
     .flightDetail .bottomMobile{
         display: flex;
     }
-    
-
 }
+
+
 
 @media screen and (max-width: 393px){
     .steps{

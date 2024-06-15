@@ -120,7 +120,7 @@
         height: 104px;
         border-radius: 8px;
         background-color: #fff;
-        margin:16px 0 32px 0;
+        margin-bottom: 32px;
         display: flex;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.10) );
     }
@@ -160,8 +160,76 @@
         margin-bottom: 8px;
     }
 
+    /* 手機版艙等頁籤----------------------------------- */
+    .classMobile {
+        width: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 32px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+    
+    .tab {
+        display: flex;
+        width: 100%;
+    }
+    
+    .tab-item {
+        flex: 1;
+        text-align: center;
+        padding: 20px 0;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+    
+    .tab-item h4 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0 0 8px 0;
+    }
+    
+    .tab-item p {
+        font-size: 16px;
+        margin: 0;
+    }
+    
+    .tab-item span {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .tab-item.active {
+        background-color: #DDE2F5;
+        color: #223F9A;
+    }
+    
+    .tab-item:not(.active) {
+        background-color: #223F9A;
+        color: #304296;
+    }
+    
+    .tab-item:nth-child(2) {
+        background-color: #FF4B4B;
+        color: white;
+    }
+    
+    .tab-item.active:nth-child(2) {
+        background-color: #FF4B4B;
+    }
+    
+    .tab-item:not(.active):nth-child(2) {
+        background-color: white;
+        color: #012064;
+    }
+
     /* 航班 卡片---------------------------------------- */
     
+    .filter{
+        margin-bottom: 12px;
+        color: #A1A1A1;
+    }
+
     .tickets > li{
         margin-bottom: 32px;
     }
@@ -287,7 +355,7 @@
     }
 
     .first{
-        background-color: #751B9F;
+        background-color: #701e96;
     }
 
     .priceLine {
@@ -303,8 +371,10 @@
     width: 100%;
     height: 16px;
     background-color: #223F9A;
+}
 
-    /* display: none; */
+#darkBlue{
+    background-color: #012064;
 }
 
 .levels{
@@ -357,11 +427,9 @@ width: 100%;
     outline: 1px solid #F1F6FF;
     min-width: 256px;
     position: relative;
-    background-image: url('../img/plane-departure-solid.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 375px 281px;
-    background-position-y: 400px;
+    z-index: 1;
+    overflow: hidden;
+    background-color: white;
 }
 
 
@@ -369,7 +437,7 @@ width: 100%;
     margin-bottom: 20px;
 }
 
-.level4 .compare{
+.level4E .compare{
     height: 496px;
     background-image: url('../img/business.png');
     background-size:cover;
@@ -377,10 +445,17 @@ width: 100%;
     /* border-radius: 0 0 8px 0; */
 }
 
+.level4EP .compare{
+    height: 496px;
+    background-image: url('../img/first.jpg');
+    background-size:cover;
+    background-position: -250px;
+}
+
 .compare{
     padding: 32px;
     box-sizing: border-box;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
 }
 
 .compItem{
@@ -439,6 +514,7 @@ width: 100%;
     top: 8px;
     right: 8px;
     margin: 0;
+    cursor: pointer;
 }
 
 .flightDetail .title{
@@ -457,7 +533,7 @@ width: 100%;
 
 .flightDetail .top{
     display: flex;
-    margin-bottom: 38px;
+    margin-bottom: 36px;
     color: #898989;
     justify-content: space-between;
 }
@@ -527,7 +603,7 @@ width: 100%;
     display: flex;
     display: none;
     justify-content: center ;
-    gap: 32px;
+    gap: 16px;
 }
 
 .left .time{
@@ -540,18 +616,19 @@ width: 100%;
 }
 
 .bottomMobile .left :nth-child(1){
-    margin-bottom: 32px;
+    margin-bottom: 40px;
 }
 
 
 .bottomMobile .middle{
     width: 4px;
+    margin-bottom: 16px;
     border-radius: 4px;
     background-color: #7488C2;
 }
 
 .bottomMobile .depart{
-    margin-bottom: 64px;
+    margin-bottom: 80px;
 }
 
 .bottomMobile .arrive{
@@ -582,4 +659,78 @@ footer h6{
     color: #fff;
     margin-left: auto;
     margin-right: 16px;
+}
+
+/* 動畫------------------------------------------------- */
+
+/* 票等hover------------------------------------- */
+.levels li .bg-image {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/plane-departure-solid.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 375px 281px;
+    transition: transform 0.7s ease-out, opacity 0.7s ease;
+    transform: translateY(-300px);
+    opacity: 0;
+    z-index: 0;
+}
+
+.levels li:hover .bg-image {
+    transform: translateY(-400px);
+    opacity: 1;
+}
+
+.levels li .top, .levels li .compare {
+    position: relative;
+    z-index: 2;
+}
+
+/* 航班細節hover----------------------------------- */
+/* .infoWrapper i.fa-memo-circle-info {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #6B85D4; 
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+.infoWrapper:hover i.fa-memo-circle-info {
+    opacity: 1;
+} */
+
+
+/* 艙等hover--------------------------------------- */
+.econ .priceLine {
+    transition: background-color 0.3s ease-in-out;
+}
+.econ:hover .priceLine {
+    background-color: #6B85D4;
+}
+
+.econPrem .priceLine {
+    transition: background-color 0.3s ease-in-out;
+}
+.econPrem:hover .priceLine {
+    background-color: #6C84B8;
+}
+
+.busi .priceLine {
+    transition: background-color 0.3s ease-in-out;
+}
+.busi:hover .priceLine {
+    background-color: #DF7477;
+}
+
+.first .priceLine {
+    transition: background-color 0.3s ease-in-out;
+}
+.first:hover .priceLine {
+    background-color: #af53d9;
 }

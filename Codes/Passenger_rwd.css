@@ -76,7 +76,7 @@
     
     .inputWrapper{
         flex-direction: column;
-        margin-bottom: 32px;
+        margin-bottom: 16px;
     }
 
     input{
