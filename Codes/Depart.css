@@ -70,6 +70,10 @@
         height: 50px;
     }
 
+    header h4{
+        display: none;
+    }
+
     .user{
         display: flex;
         margin: auto 0;
@@ -518,9 +522,47 @@ width: 100%;
 
 }
 
+/* popup手機版----------------------------------- */
+.bottomMobile{
+    display: flex;
+    display: none;
+    justify-content: center ;
+    gap: 32px;
+}
+
+.left .time{
+    display: flex;
+    margin-bottom: 0;
+}
+
+.bottomMobile .left{
+    text-align: right;
+}
+
+.bottomMobile .left :nth-child(1){
+    margin-bottom: 32px;
+}
+
+
+.bottomMobile .middle{
+    width: 4px;
+    border-radius: 4px;
+    background-color: #7488C2;
+}
+
+.bottomMobile .depart{
+    margin-bottom: 64px;
+}
+
+.bottomMobile .arrive{
+    text-align-last: left;
+    align-items: flex-start;
+}
+
 /* footer----------------------------------------- */
 footer{
     background-color: #304296;
+    margin-top: auto;
 }
 
 .footerWrapper{

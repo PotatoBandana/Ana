@@ -15,7 +15,8 @@
 
 @media screen and (max-width: 1027px){
     .levels{
-        overflow: hidden;
+        /* overflow: hidden; */
+        overflow-x: auto;
     }
 
     .infoWrapper{
@@ -28,6 +29,7 @@
 
     .class li{
         min-width: 100%;
+        border-right: none;
     }
 
     .info{
@@ -42,12 +44,39 @@
 
 @media screen and (max-width: 700px){
 
+    header{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        filter: drop-shadow(0 0px 4px 4px rgba(0, 0, 0, 0.10));
+        z-index: 1;
+    }
+
+    header img{
+        display: none;
+    }
+
+    header h4{
+        display: block;
+        line-height: 50px;
+        color: white;
+        font-weight: bold;
+    }
+
+    header p{
+        display: none;
+    }
+
     .steps{
         width: 79vw;
         height: 10vw;
         margin: 9vw auto;
     }
     
+    .title{
+        display: none;
+    }
+
     .info{
         width: 50vw;
     }
@@ -56,12 +85,17 @@
         /* height: 27vw; */
         height: 120px;
     }
+
     h2{
         font-size: 20px;
     }
 
     h3{
         font-size: 16px;
+    }
+
+    h4{
+        font-size: 18px;
     }
 
     h5{
@@ -112,6 +146,18 @@
 
     footer img{
         height: 20px;
+    }
+
+    .content{
+        padding: 16px;
+    }
+
+    .flightDetail .bottom{
+        display: none;
+    }
+
+    .flightDetail .bottomMobile{
+        display: flex;
     }
     
 

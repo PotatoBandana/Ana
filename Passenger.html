@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='./Codes/Passenger.css'>
+    <link rel="stylesheet" href='./Codes/Passenger_rwd.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header----------------------------------- -->
+    <header>
+        <div class="headerWrapper">
+            <a href="">
+                <img src="./img/ana-logo.png" alt="">
+            </a>
+            <h4>選擇回程</h4>
+            <div class='user'>
+                <a href="" class="help">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <p>聯絡我們</p>
+                </a>
+
+                <a href="" class="logOut">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <p>登出</p>
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+
+<!-- main----------------------------------------- -->
+    <div class="steps">
+        <img src="img/step3.png" alt="">
+    </div>
+    <div class="main">
+        <div class="mainWrapper">
+            <div class="block1">
+                <h2>個人資料</h2>
+                <ul class="sheetWrapper">
+                    <li class="name">
+                        <h4>請填入與護照相同資料</h4>
+                        <div class="inputWrapper">
+                            <input type="text" id="given1" placeholder="名字">
+                            <input type="text" id="middle1" placeholder="中間名">
+                            <input type="text" id="family1" placeholder="姓氏">
+                        </div>
+                    </li>
+                    
+                    <li class="birth">
+                        <h4>出生日期</h4>
+                        <div class="inputWrapper">
+                            <input type="text" id="yearSelector" name="yearSelector" list="yearOptions" placeholder="年">
+
+                            <input type="text" id="monthSelector" name="monthSelector" list="monthOptions" placeholder="月">
+
+                            <input type="text" id="daySelector" name="daySelector" list="dayOptions" placeholder="日">
+                            
+                            <datalist id="dayOptions">
+
+                            </datalist>
+                            <datalist id="monthOptions">
+
+                            </datalist>
+                            <datalist id="yearOptions">
+
+                            </datalist>
+                        </div>
+                    </li>
+
+                    <li class="gender">
+                        <h4>性別</h4>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">男</label>
+                
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">女</label>
+                
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">其他</label>
+                    </li>
+
+                    <li class="member">
+                        <h4>哩程計畫種類</h4>
+                        <select id="mileageClub" name="mileageClub" placeholder="Ana哩程俱樂部">
+                            <option value="Ana">Ana哩程俱樂部</option>
+                            <option value="AP">AeroPlan</option>
+                            <option value="starPoint">星點獎勵計畫</option>
+                            <option value="AC">Asiana Club</option>
+                            <option value="CM">ConnectMiles</option>
+                        </select>
+                        <input type="text" id="memberNo" placeholder="哩程卡號">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="block2">
+                <div class="passenger1">
+                    <h3>乘客1</h3>
+                    <h5>成人(16歲以上)</h5>
+                </div>
+
+                <div class="passenger2">
+                    <h3>乘客2</h3>
+                    <h5>成人(16歲以上)</h5>
+                </div>
+
+                <div class="passenger3">
+                    <h3>乘客3</h3>
+                    <h5>兒童(16歲以下)</h5>
+                </div>
+
+                <a href=""><button><h4>下一步</h4></button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 出生年選擇--------------------------------------- -->
+    <script>
+        const dayOptions = document.getElementById('dayOptions');
+        for (let day = 1; day <= 31; day++) {
+            const option = document.createElement('option');
+            option.value = day;
+            dayOptions.appendChild(option);
+        }
+
+        const months = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+        const monthOptions = document.getElementById('monthOptions');
+        months.forEach(month => {
+            const option = document.createElement('option');
+            option.value = month;
+            monthOptions.appendChild(option);
+        });
+
+        const currentYear = 2014;
+        const startYear = 1900; // Change this to your desired start year
+        const endYear = currentYear + 10; // Change this to your desired end year
+        const yearOptions = document.getElementById('yearOptions');
+
+        for (let year = startYear; year <= endYear; year++) {
+            const option = document.createElement('option');
+            option.value = year;
+            yearOptions.appendChild(option);
+        }
+    </script>
+
+
+    <!-- footer-------------------------------------- -->
+    <footer>
+        <div class="footerWrapper">
+            <a href=""><img src="img/star_alli.png" alt=""></a>
+            <h6>Copyright © ANA. All rights reserved.</h6>
+        </div>
+    </footer>
+
+    <script src="./Codes/Depart.js"></script>
+    <script src="./Codes/jquery-3.3.1.min.js"></script>
+
+
+
+
+
+</body>
+</html>

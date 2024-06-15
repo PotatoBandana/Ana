@@ -33,7 +33,7 @@ window.onload = function(){
     var count = 0;    
     function updateVW() {
         VW = $(window).width();
-        console.log(VW);
+        // console.log(VW);
         count = 0;
         shift = 0;
         $('.classSel').animate({'left': 0}, 500);
