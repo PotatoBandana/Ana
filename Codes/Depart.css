@@ -113,6 +113,158 @@
         font-weight: bold;
         margin-bottom: 32px;
     }
+    /* 去程卡片------------------------------- */
+    .depart .title {
+        display: flex;
+        margin-bottom: 8px;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    
+    .depart .title h5 {
+        font-weight: normal;
+    }
+    
+    .depart .card {
+        display: flex;
+        background-color: #fff;
+        border-radius: 8px;
+        margin-bottom: 80px;
+        padding: 54px 40px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.10));
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .depart .left {
+        display: flex;
+        width: 618px;
+    }
+    
+    .depart h2 {
+        color: #223F9A;
+    }
+    
+    .depart .card h5 {
+        margin-top: 8px;
+        color: #898989;
+    }
+
+    .depart .left{
+        align-items: center;
+    }
+
+    .depart .start {
+        min-width: 146px;
+    }
+
+    .depart .startTime{
+        display: flex;
+    }
+
+    .depart .trip {
+        margin: 0 16px;
+        width: 100%;
+    }
+
+    .depart .arrive {
+        text-align-last: right;
+        min-width: 146px;
+    }
+
+    .depart .arriveTime{
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .depart .time {
+        justify-content: center;
+    }
+    
+    .depart .line {
+        margin: 4px 0;
+    }
+    
+    .depart .middle {
+        margin: 0 64px;
+        min-width: 84px;
+    }
+    
+    .depart button {
+        background-color: #DDE2F5;
+        border-radius: 8px;
+        width: 256px;
+        height: 52px;
+    }
+    
+    .depart a {
+        text-decoration: none;
+        color: #223F9A;
+        font-weight: bold;
+    }
+
+    /* 完整航班細節popup---------------------- */
+    .fullDetailLeft{
+        width: 686px;
+        background-color: white;
+    }
+    .fullDetail h1{
+        margin: 24px auto;
+    }
+
+    .fullDetail .stop1{
+        background-color: #F1F6FF;
+        padding: 34px 46px;
+        border-radius: 8px;
+    }
+
+    .fullDetail .title{
+        display: flex;
+        margin-bottom: 8px;
+        justify-content: space-between;
+        align-items: end;
+    }
+    
+    .fullDetail .flightNo{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .fullDetail img{
+        height: 16px;
+    }
+
+    .content{
+        display: flex;
+        margin-top: 38px;
+    }
+
+    .fullDetail .startTime{
+        display: flex;
+        min-width: 146px;
+    }
+
+    .fullDetail .arrive{
+        text-align: right;
+    }
+
+    .fullDetail .arriveTime{
+        display: flex;
+        min-width: 146px;
+        justify-content: end;
+    }
+    .fullDetail .trip{
+        width: 100%;
+    }
+
+    .fullDetail .time{
+        display: flex;
+        justify-content: center;
+    }
+
+    .fullDetail .line{
+        margin: 4px 0;
+    }
 
     /* 選天----------------------------------- */
     .daySel{
@@ -121,25 +273,23 @@
         border-radius: 8px;
         background-color: #fff;
         margin-bottom: 32px;
+        justify-content: space-between;
         display: flex;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.10) );
     }
 
-    .daySel button{
-        min-width: 56px;
-        padding: 0;
-    }
-    .dayWrapper{
-        width: 100%;
+    .dayWrapper {
         display: flex;
-        justify-content: center;
-        overflow: hidden;
+        gap: 8px;
         padding: 9px 0;
-        box-sizing: border-box; 
+        box-sizing: border-box;
+        overflow-x: auto;
+        /* scroll-behavior: smooth; */
+        flex: 1;
     }
-
-    .dayWrapper li{
-        /* background-color: red; */
+    
+    .dayWrapper li {
+        cursor: pointer;
         color: #7D7D7D;
         min-width: 160px;
         height: 100%;
@@ -147,14 +297,29 @@
         padding: 22px 0;
         box-sizing: border-box;
         border-radius: 8px;
-        flex-grow: 1;
+        flex: 0 0 auto;
+    }
+    
+    .dayWrapper::-webkit-scrollbar {
+        display: none;
     }
 
-    .dayWrapper li:nth-child(4){
-        background-color:#DDE2F5;
+    .dayWrapper li.selected {
+        background-color: #DDE2F5;
         color: #223F9A;
         font-weight: bold;
     }
+
+    .daySel button{
+        min-width: 56px;
+        padding: 0;
+    }
+
+    /* .dayWrapper li:nth-child(4){
+        background-color:#DDE2F5;
+        color: #223F9A;
+        font-weight: bold;
+    } */
     
     .dayWrapper h4{
         margin-bottom: 8px;
@@ -250,7 +415,7 @@
         /* margin: auto; */
     }
 
-    .flightNo{
+    .tickets .flightNo{
         display: flex;
         position: absolute;
         top: 18px;
@@ -301,7 +466,6 @@
     .class{ 
         width: 596px;
         overflow: hidden;
-        /* flex-basis:content; */
     }
 
     .classSel{
@@ -690,21 +854,35 @@ footer h6{
 }
 
 /* 航班細節hover----------------------------------- */
-/* .infoWrapper i.fa-memo-circle-info {
+
+/* .info::after {
+    content: "";
+    background-image: url('../img/passport-solid.svg');
+    background-repeat: no-repeat;
     position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    font-size: 24px;
-    color: #6B85D4; 
-    opacity: 0; 
-    transition: opacity 0.3s ease;
+    top: -50px;
+    width: 400px;
+    height: 350px;
+    z-index: -1;
+    opacity: 0;
+
+    transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out;
 }
 
-.infoWrapper:hover i.fa-memo-circle-info {
+.infoWrapper:hover .info::after {
     opacity: 1;
+    top: -150px;
 } */
 
+/* 按鈕hover--------------------------------------- */
+.scrollLeft:hover{
+    background-color: #f4f4f4;
+    /* background: linear-gradient(to left, #e6ecff, white); */
+}
+.scrollRight:hover{
+    background-color: #f4f4f4;
+    /* background: linear-gradient(to left, white, #e6e6e6); */
+}
 
 /* 艙等hover--------------------------------------- */
 .econ .priceLine {

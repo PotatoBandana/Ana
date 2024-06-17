@@ -42,7 +42,7 @@
     .steps{
         width: 79vw;
         height: 10vw;
-        margin: 9vw auto;
+        margin: 70px auto 36px auto;
     }
     
     .title{
@@ -89,11 +89,39 @@
         margin-bottom: 16px;
      }
 
-     .block2 button{
-        /* background-color: red; */
-        width: 40px;
+     .block1::before {
+        display: none;
+    }
+
+     .gender{
+        margin-bottom: 16px;
      }
 
+     .block2{
+        display: block;
+     }
+
+     .block2 a{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+     }
+
+     .block2 button {
+        width: 100%;
+        max-width: 383px;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+     .passengers{
+        margin-bottom: 16px;
+        justify-content:center;
+        gap: 32px;  
+     }
 
 }
 

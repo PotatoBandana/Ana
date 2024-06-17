@@ -1,32 +1,37 @@
 window.onload = function(){
 
 
-    //點擊艙等後視窗彈出----------------------------------- 
-    // document.getElementById('t1Econ').onclick = toggleList;
+    //選天------------------------------------------- 
+    const itemWidth = $('.dayWrapper li').outerWidth(true); // Includes margin
+    const totalItems = $('.dayWrapper li').length;
+    const visibleItems = 7;
+    const gap = 8;
+    const scrollAmount = (itemWidth + gap) * visibleItems;
 
-    // var t1 = document.getElementById("t1EList");
-    // var bar = document.getElementById("blue");
+    // Calculate the middle position
+    const middlePosition = ((totalItems * (itemWidth + gap)) - gap - $('.dayWrapperContainer').width()) / 2;
+
+    // Set the initial scroll position to the middle
+    $('.dayWrapper').scrollLeft(middlePosition);
+
+    $('.dayWrapper li').click(function(){
+        $('.dayWrapper li').removeClass('selected'); // Remove 'selected' class from all items
+        $(this).addClass('selected'); // Add 'selected' class to the clicked item
+    });
+
+    $('.dayLeft').click(function(){
+        $('.dayWrapper').animate({
+            scrollLeft: '-=' + scrollAmount
+        }, 400,); // Use 'easeOutQuad' easing function
+    });
+
+    $('.dayRight').click(function(){
+        $('.dayWrapper').animate({
+            scrollLeft: '+=' + scrollAmount
+        }, 400,); // Use 'easeOutQuad' easing function
+    });
 
 
-    // function toggleList(){
-    //     // console.log(x);
-    //     // console.log(x.style);
-    //     // if(x.classList.contains('hide')){
-    //     //     x.classList.remove('hide')
-    //     // }else{
-    //     //     x.classList.add('hide')
-    //     // }
-
-        
-
-    //     if (t1.style.display === "none") {
-    //     t1.style.display = "flex";
-    //     bar.style.display = 'block';
-    //     } else {
-    //     t1.style.display = "none";
-    //     bar.style.display = 'none';
-    //     }
-    // }
     // 頁面寬度偵測------------------------------------
     var VW;
     var shift = 0;
@@ -43,7 +48,7 @@ window.onload = function(){
     $(window).resize(updateVW);
 
     //艙等左右滑動選擇----------------------------------
-    
+
     $('.scrollRight').click(function(){
         var N = $(this).attr('id').substr(1, 1);
         if(VW >1027){
@@ -63,7 +68,7 @@ window.onload = function(){
                 shift = shift - po
             
                 $('.classSel').animate({'left': shift}, 500);
-                        // console.log(po);
+                    // console.log(po);
             }
         }            
     })
@@ -95,7 +100,7 @@ window.onload = function(){
     $('#tab2').click(function(){
         if (count <= 0){
             count++;
-            var po = $('#t1EconP').position().left;
+            var po = $('#t1P').position().left;
             shift = shift - po
 
             $('.classSel').animate({'left': shift}, 500);
@@ -108,7 +113,7 @@ window.onload = function(){
     $('#tab1').click(function(){
         if (count > 0){
             count--;
-            var po = $('#t1EconP').position().left;
+            var po = $('#t1P').position().left;
             shift = shift + po
 
             $('.classSel').animate({'left': shift}, 500);
@@ -147,7 +152,6 @@ window.onload = function(){
 
     $('.popup').click(function(e){
         e.stopPropagation()
-        console.log(e.eventPhase);
     })
 
 }

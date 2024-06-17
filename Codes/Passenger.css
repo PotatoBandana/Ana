@@ -128,6 +128,21 @@
         padding-top: 96px;
         display: flex;
         justify-content: center;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .block1::before {
+        content: "";
+        background-image: url('../img/passport-solid.svg');
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: rotate(-45deg);
+        width: 400px;
+        height: 350px;
+        z-index: -1;
     }
 
     .block1 h2{
@@ -187,15 +202,27 @@
         margin-right: 48px;
     }
 
+    .gender :last-child{
+        margin-right: 0;
+    }
+
     /* block2------------------------------------- */
     .block2{
+        display: flex;
         background-color: #fff;
         width: 100%;
-        display: flex;
-        gap: 56px;
         padding: 32px;
         box-sizing: border-box;
         border-radius: 16px;
+    }
+
+    .passengers{
+        display: flex;
+        gap: 56px;
+    }
+
+    .passengers li{
+        min-width: 109px;
     }
 
     .block2 h3{
@@ -203,7 +230,7 @@
         color: #B0B0B0;;
     }
 
-    .block2 :nth-child(1) h3{
+    .passengers :nth-child(1) h3{
         color: #304296;
     }
 
@@ -216,7 +243,7 @@
 
     .block2 a{
         margin-left: auto;
-    } 
+    }
 
     button h4{
         text-decoration: none;
