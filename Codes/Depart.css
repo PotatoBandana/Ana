@@ -224,21 +224,21 @@
     /* .tab-item:not(.active) {
         background-color: #223F9A;
         color: #304296;
-    }
+    }*/
     
-    .tab-item:nth-child(2) {
+    /* .tab-item:nth-child(2) {
         background-color: #FF4B4B;
         color: white;
     }
     
     .tab-item.active:nth-child(2) {
         background-color: #FF4B4B;
-    }
+    } */
     
     .tab-item:not(.active):nth-child(2) {
         background-color: white;
         color: #012064;
-    } */
+    }
 
     /* 航班 卡片---------------------------------------- */
     
@@ -389,9 +389,18 @@
     background-color: #223F9A;
 }
 
-#darkBlue{
+#darkBar{
     background-color: #012064;
 }
+
+#redBar{
+    background-color: #b01f24;
+}
+
+#purpleBar{
+    background-color: #701e96;
+}
+
 
 .levels{
     width: 100%;
@@ -455,7 +464,7 @@ width: 100%;
 
 .level4E .compare{
     height: 496px;
-    background-image: url('../img/business.png');
+    background-image: url('../img/prem.png');
     background-size:cover;
     background-position: -150px;
     /* border-radius: 0 0 8px 0; */
@@ -463,9 +472,23 @@ width: 100%;
 
 .level4EP .compare{
     height: 496px;
-    background-image: url('../img/first.jpg');
+    background-image: url('../img/busi.jpg');
     background-size:cover;
     background-position: -250px;
+}
+
+.level4B .compare{
+    height: 496px;
+    background-image: url('../img/first.jpg');
+    background-size:cover;
+    background-position: -350px;
+}
+
+.level4F .compare{
+    height: 496px;
+    background-image: url('../img/tokyo.jpg');
+    background-size:cover;
+    background-position: -900px;
 }
 
 .compare{
@@ -477,7 +500,7 @@ width: 100%;
 .compItem{
     display: flex;
     margin-bottom: 8px;
-    color: #7D7D7D;
+    color: #cacaca;
     align-items: baseline;
 }
 
@@ -581,6 +604,15 @@ width: 100%;
 
 .flightDetail h2{
     color: #223F9A;
+    margin-bottom: 4px;
+}
+
+.flightDetail .bottom h5{
+    color: #898989;
+}
+
+.flightDetail .depart{
+    min-width: 140px;
 }
 
 .flightDetail .depart > :nth-child(2){
@@ -594,6 +626,7 @@ width: 100%;
 .flightDetail .trip{
     margin-top: 12px;
     flex-grow: 2;
+    width: 100%;
 }
 
 .flightDetail .trip .time{
@@ -605,12 +638,14 @@ width: 100%;
 
 .flightDetail .trip .line{
     margin: 0;
+    width: 100%;
 }
 
 .flightDetail .arrive{
     display: inline-flex;
     flex-direction: column;
     align-items: flex-end;
+    min-width: 140px;
 }
 
 /* popup手機版----------------------------------- */

@@ -114,6 +114,7 @@
         margin: 0 auto;
         padding: 0 80px;
         transition: padding 0.5s ease; 
+        min-height: 100vh;
     }
 
     .mainWrapper .title{
@@ -224,7 +225,8 @@
         top: 0;
         padding: 0 80px;
         box-sizing: border-box;
-        /* display: none; */
+
+        display: none;
         transition: padding 0.5s ease; 
     }
 
@@ -232,15 +234,17 @@
         display: flex;
         background-color: #fff;
         width: 100%;
-        justify-content: space-between;
+        max-width: 1280px;
+        justify-content: space-around;
         border-radius: 16px;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        padding: 32px;
+        padding: 48px 32px;
         box-sizing: border-box;
         position: relative;
+        overflow-y: auto;
     }
 
     .fullDetail .close-icon{
@@ -248,7 +252,7 @@
         right: 16px;
         top: 16px;
         color: #223F9A;
-        font-size: 32;
+        font-size: 32px;
     }
 
     .fullDetailLeft{
@@ -263,7 +267,7 @@
 
     .fullDetailLeft .stops {
         background-color: #F1F6FF;
-        padding: 34px 46px;
+        padding: 24px 34px;
         border-radius: 8px;
     }
 
@@ -273,10 +277,28 @@
         justify-content: space-between;
         align-items: end;
     }
+
+    .fullDetailLeft .stops h5{
+        color: #898989;
+    }
+
+    .fullDetail .title h5{
+        font-weight: normal;
+    }
+
+    .fullDetail h2{
+        color: #223F9A;
+    }
     
     .fullDetail .flightNo{
         display: flex;
         justify-content: space-between;
+        margin-bottom: 8px;
+    }
+
+    .fullDetail .flightNo :first-child{
+        color: #012064;
+        font-weight: bold;
     }
 
     .fullDetail img{
@@ -285,12 +307,13 @@
 
     .fullDetail .content{
         display: flex;
-        margin-top: 38px;
+        margin-top: 24px;
     }
 
     .fullDetail .startTime{
         display: flex;
         min-width: 146px;
+        margin-bottom: 8px;
     }
 
     .fullDetail .arrive{
@@ -301,10 +324,12 @@
         display: flex;
         min-width: 146px;
         justify-content: end;
+        margin-bottom: 8px;
     }
 
     .fullDetail .trip{
         width: 100%;
+        margin: auto 0;
     }
 
     .fullDetail .time{
@@ -324,33 +349,45 @@
     .fullDetail .list{
         background-color: #F1F6FF;
         border-radius: 8px;
-        padding: 16px;
+        padding: 32px 32px 1px 32px;
         box-sizing: border-box;
     }
 
     .fullDetail .divider{
         width: 1px;
-        height: 250px;
-        background-color: red;
+        height: 400px;
+        background-color: #DADADA;
         margin: auto 0;
     }
 
     .fullDetailRight{
-        width: 300px;
+        width: 310px;
     }
 
     .fullDetailRight > :first-child{
         text-align: center;
         color: #223F9A;
-        margin-bottom: 56px;
+        margin-bottom: 32px;
     }
 
     .fullDetailRight .compItem{
         display: flex;
+        justify-content: space-between;
+        margin-bottom: 32px;
+    }
+
+    .fullDetailRight .item{
+        display: flex;
+        align-items: center;
+    }
+
+    .fullDetailRight p{
+        color: #012064;
     }
     
     .fullDetail .upgrade{
         display: flex;
+        justify-content: space-between;
     }
 
     /* 選天----------------------------------- */
@@ -468,12 +505,12 @@
     
     .tab-item.active:nth-child(2) {
         background-color: #FF4B4B;
-    }
+    }*/
     
     .tab-item:not(.active):nth-child(2) {
         background-color: white;
         color: #012064;
-    } */
+    }
 
     /* 航班 卡片---------------------------------------- */
     
@@ -624,8 +661,16 @@
     background-color: #223F9A;
 }
 
-#darkBlue{
+#darkBar{
     background-color: #012064;
+}
+
+#redBar{
+    background-color: #b01f24;
+}
+
+#purpleBar{
+    background-color: #701e96;
 }
 
 .levels{
@@ -690,7 +735,7 @@ width: 100%;
 
 .level4E .compare{
     height: 496px;
-    background-image: url('../img/business.png');
+    background-image: url('../img/prem.png');
     background-size:cover;
     background-position: -150px;
     /* border-radius: 0 0 8px 0; */
@@ -698,9 +743,23 @@ width: 100%;
 
 .level4EP .compare{
     height: 496px;
-    background-image: url('../img/first.jpg');
+    background-image: url('../img/busi.jpg');
     background-size:cover;
     background-position: -250px;
+}
+
+.level4B .compare{
+    height: 496px;
+    background-image: url('../img/first.jpg');
+    background-size:cover;
+    background-position: -350px;
+}
+
+.level4F .compare{
+    height: 496px;
+    background-image: url('../img/tokyo.jpg');
+    background-size:cover;
+    background-position: -900px;
 }
 
 .compare{
@@ -712,7 +771,7 @@ width: 100%;
 .compItem{
     display: flex;
     margin-bottom: 8px;
-    color: #7D7D7D;
+    color: #cacaca;
     align-items: baseline;
 }
 
@@ -818,8 +877,16 @@ width: 100%;
     color: #223F9A;
 }
 
+.flightDetail .depart{
+    min-width: 140px;
+}
+
 .flightDetail .depart > :nth-child(2){
     margin-bottom: 8px;
+}
+
+.flightDetail .arrive{
+
 }
 
 .flightDetail .arrive > :nth-child(2){
@@ -829,6 +896,7 @@ width: 100%;
 .flightDetail .trip{
     margin-top: 12px;
     flex-grow: 2;
+    width: 100%;
 }
 
 .flightDetail .trip .time{
@@ -840,12 +908,14 @@ width: 100%;
 
 .flightDetail .trip .line{
     margin: 0;
+    width: 100%;
 }
 
 .flightDetail .arrive{
     display: inline-flex;
     flex-direction: column;
     align-items: flex-end;
+    min-width: 140px;
 }
 
 /* popup手機版----------------------------------- */

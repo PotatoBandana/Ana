@@ -15,7 +15,7 @@
             <a href="">
                 <img src="./img/ana-logo.png" alt="">
             </a>
-            <h4>選擇回程</h4>
+            <h4>乘客資訊</h4>
             <div class='user'>
                 <a href="" class="help">
                     <i class="fa-solid fa-circle-question"></i>
@@ -122,7 +122,7 @@
     <!-- 出生年選擇--------------------------------------- -->
     <script>
         const dayOptions = document.getElementById('dayOptions');
-        for (let day = 1; day <= 31; day++) {
+        for (let day = 1; day <= 31; day++) { //生成日選單
             const option = document.createElement('option');
             option.value = day;
             dayOptions.appendChild(option);
@@ -139,9 +139,9 @@
             monthOptions.appendChild(option);
         });
 
-        const currentYear = 2014;
-        const startYear = 1900; // Change this to your desired start year
-        const endYear = currentYear + 10; // Change this to your desired end year
+        const currentYear = 2014; //預設
+        const startYear = 1900; // 起始年
+        const endYear = currentYear + 10; // 上限年
         const yearOptions = document.getElementById('yearOptions');
 
         for (let year = startYear; year <= endYear; year++) {

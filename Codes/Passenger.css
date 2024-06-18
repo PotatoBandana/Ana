@@ -59,7 +59,7 @@
 /* Header-------------------------------------- */
     header{
         background-color: #304296;
-        
+        z-index: 4;
     }
 
     .headerWrapper{
@@ -67,6 +67,7 @@
         /* margin-left: calc((100vw - 1280px)/2); */
         margin: 0 auto;
         display: flex;
+        z-index: 3;
         
     }
 
@@ -111,6 +112,7 @@
         background-color:#DDE2F5;
         padding: 48px 0;
         margin: 0 auto;
+        min-height: 100vh;
     }
     .mainWrapper{
         width: 1280px;
