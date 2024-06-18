@@ -1,19 +1,29 @@
-@media screen and (max-width: 1312px){
+@media screen and (max-width: 1440px){
 
     .mainWrapper{
         width: auto;
     }
 
     .info{
-        width: 36.5vw;
+        width: 33.3vw;
     }
 
     .class li{
         min-width: 50%;
     }
+
 }
 
-@media screen and (max-width: 1027px){
+@media screen and (max-width: 1145px){
+
+    .mainWrapper{
+        padding: 0 16px;
+    }
+
+    .headerWrapper{
+        padding: 0 16px;
+    }
+    
     .levels{
         /* overflow: hidden; */
         overflow-x: auto;
@@ -38,7 +48,11 @@
     }
 
     .flightDetail .popup{
-        width: 75vw;
+        width: 67.5vw;
+    }
+
+    .footerWrapper{
+        padding: 0 16px;
     }
 }
 

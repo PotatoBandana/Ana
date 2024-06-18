@@ -1,31 +1,29 @@
-@media screen and (max-width: 1312px){
+@media screen and (max-width: 1440px){
 
     .mainWrapper{
         width: auto;
     }
 
     .info{
-        width: 36.5vw;
+        width: 33.3vw;
     }
 
     .class li{
         min-width: 50%;
     }
 
-    /* .depart .trip{
-        width: 27vw;
-    }
-
-    .depart .middle{
-        margin: 0 8.4vw;
-    }
-
-    .depart button{
-        width: 19.5vw;
-    } */
 }
 
-@media screen and (max-width: 1027px){
+@media screen and (max-width: 1145px){
+
+    .mainWrapper{
+        padding: 0 16px;
+    }
+
+    .headerWrapper{
+        padding: 0 16px;
+    }
+    
     .levels{
         /* overflow: hidden; */
         overflow-x: auto;
@@ -87,7 +85,28 @@
 
     .depart .arriveTime{
         flex-direction: column;
+    }
 
+    .fullDetailWrapper{
+        flex-direction: column;
+        min-width: 300px;
+        align-items: center;
+    }
+
+    .fullDetailLeft{
+        width: 100%;
+    }
+
+    .fullDetail .divider{
+        display: none;
+    }
+
+    .footerWrapper{
+        padding: 0 16px;
+    }
+
+    .fullDetailRight > :first-child{
+        margin:32px 0 16px 0;
     }
 }
 
@@ -153,7 +172,7 @@
     }
 
     h4{
-        font-size: 14px;
+        font-size: 18px;
     }
 
     h5{
@@ -192,7 +211,7 @@
     .depart .arrive{
         min-width: 100px;
     }
-
+    
     .classMobile{
         display: block;
     }
@@ -203,7 +222,6 @@
 
     .tickets .time{
         display: none;
-        font-size: 14px;
     }
 
     .tickets button{
@@ -256,6 +274,15 @@
     .flightDetail .bottomMobile{
         display: flex;
     }
+
+    .fullDetail{
+        padding: 0 16px;
+    }
+
+    .fullDetailLeft .stops {
+        padding: 16px;
+    }
+
 }
 
 

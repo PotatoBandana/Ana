@@ -5,6 +5,11 @@
         background-color: #F8F8F8;
     }
 
+    h1{
+        font-size: 32px;
+        font-weight: bold;
+    }
+
     h2{
         font-size: 28px;
         font-weight: bold;
@@ -105,7 +110,6 @@
     /* main------------------------------------ */
     .mainWrapper{
         width: 1280px;
-        min-height: 100vh;
         /* transform: scale(0.8); */
         margin: 0 auto;
         padding: 0 80px;
@@ -116,6 +120,237 @@
         color: #012064;
         font-weight: bold;
         margin-bottom: 32px;
+    }
+    /* 去程卡片------------------------------- */
+    .depart .title {
+        display: flex;
+        margin-bottom: 8px;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    
+    .depart .title h5 {
+        font-weight: normal;
+    }
+    
+    .depart .card {
+        display: flex;
+        background-color: #fff;
+        border-radius: 8px;
+        margin-bottom: 80px;
+        padding: 54px 40px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.10));
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .depart .left {
+        display: flex;
+        width: 618px;
+    }
+    
+    .depart h2 {
+        color: #223F9A;
+    }
+    
+    .depart .card h5 {
+        margin-top: 8px;
+        color: #898989;
+    }
+
+    .depart .left{
+        align-items: center;
+    }
+
+    .depart .start {
+        min-width: 146px;
+    }
+
+    .depart .startTime{
+        display: flex;
+    }
+
+    .depart .trip {
+        margin: 0 16px;
+        width: 100%;
+    }
+
+    .depart .arrive {
+        text-align-last: right;
+        min-width: 146px;
+    }
+
+    .depart .arriveTime{
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .depart .time {
+        justify-content: center;
+    }
+    
+    .depart .line {
+        margin: 4px 0;
+    }
+    
+    .depart .middle {
+        margin: 0 64px;
+        min-width: 84px;
+    }
+    
+    .depart button {
+        background-color: #DDE2F5;
+        border-radius: 8px;
+        width: 256px;
+        height: 52px;
+    }
+    
+    .depart a {
+        text-decoration: none;
+        color: #223F9A;
+        font-weight: bold;
+    }
+
+    /* 完整航班細節popup---------------------- */
+
+    .fullDetail{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.5);
+        backdrop-filter: blur(1px);
+        position: fixed;
+        z-index: 5;
+        left: 0;
+        top: 0;
+        padding: 0 80px;
+        box-sizing: border-box;
+        /* display: none; */
+        transition: padding 0.5s ease; 
+    }
+
+    .fullDetailWrapper{
+        display: flex;
+        background-color: #fff;
+        width: 100%;
+        justify-content: space-between;
+        border-radius: 16px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 32px;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .fullDetail .close-icon{
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        color: #223F9A;
+        font-size: 32;
+    }
+
+    .fullDetailLeft{
+        width: 600px;
+
+    }
+    .fullDetailLeft > :first-child{
+        text-align: center;
+        color: #223F9A;
+        margin-bottom: 24px;
+    }
+
+    .fullDetailLeft .stops {
+        background-color: #F1F6FF;
+        padding: 34px 46px;
+        border-radius: 8px;
+    }
+
+    .fullDetail .title{
+        display: flex;
+        margin-bottom: 8px;
+        justify-content: space-between;
+        align-items: end;
+    }
+    
+    .fullDetail .flightNo{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .fullDetail img{
+        height: 16px;
+    }
+
+    .fullDetail .content{
+        display: flex;
+        margin-top: 38px;
+    }
+
+    .fullDetail .startTime{
+        display: flex;
+        min-width: 146px;
+    }
+
+    .fullDetail .arrive{
+        text-align: right;
+    }
+
+    .fullDetail .arriveTime{
+        display: flex;
+        min-width: 146px;
+        justify-content: end;
+    }
+
+    .fullDetail .trip{
+        width: 100%;
+    }
+
+    .fullDetail .time{
+        display: flex;
+        justify-content: center;
+    }
+
+    .fullDetail .line{
+        margin: 4px 0;
+    }
+
+    .fullDetail p{
+        margin-bottom: 0px;
+        padding-left: 8px;
+    }
+
+    .fullDetail .list{
+        background-color: #F1F6FF;
+        border-radius: 8px;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    .fullDetail .divider{
+        width: 1px;
+        height: 250px;
+        background-color: red;
+        margin: auto 0;
+    }
+
+    .fullDetailRight{
+        width: 300px;
+    }
+
+    .fullDetailRight > :first-child{
+        text-align: center;
+        color: #223F9A;
+        margin-bottom: 56px;
+    }
+
+    .fullDetailRight .compItem{
+        display: flex;
+    }
+    
+    .fullDetail .upgrade{
+        display: flex;
     }
 
     /* 選天----------------------------------- */
@@ -669,11 +904,13 @@ footer{
 
 footer img{
     height: 30px;
+    margin-left: 16px;
 }
 
 footer h6{
     color: #fff;
     margin-left: auto;
+    margin-right: 16px;
 }
 
 /* 動畫------------------------------------------------- */
