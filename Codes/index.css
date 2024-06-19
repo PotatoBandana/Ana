@@ -616,8 +616,8 @@ width: 100%;
     color: #898989;
 }
 
-.flightDetail .depart{
-    min-width: 140px;
+.flightDetail .right{
+    max-width: 90px;
 }
 
 .flightDetail .depart > :nth-child(2){
