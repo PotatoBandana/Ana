@@ -429,6 +429,10 @@
         margin-bottom: 32px;
     }
 
+    .fullDetailRight .compItem i, svg{
+        color: #b0b0b0;
+    }
+
     .fullDetailRight .item{
         display: flex;
         align-items: center;
