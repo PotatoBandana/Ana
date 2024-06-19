@@ -43,10 +43,6 @@
         font-size: 16px;
     }
 
-    a{
-        text-decoration: none;
-    }
-
     svg{
         margin-right: 4px;
         font-size: 16px;
@@ -126,6 +122,10 @@
         font-weight: bold;
         margin-bottom: 32px;
     }
+
+    .mainWrapper > :nth-child(3){
+        margin-bottom: 128px;
+    }
     /* 去程卡片------------------------------- */
     .depart .title {
         display: flex;
@@ -142,11 +142,12 @@
         display: flex;
         background-color: #fff;
         border-radius: 8px;
-        margin-bottom: 80px;
+        margin-bottom: 64px;
         padding: 54px 40px;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.10));
         justify-content: space-between;
         align-items: center;
+        cursor: pointer;
     }
     
     .depart .left {
@@ -216,6 +217,53 @@
         font-weight: bold;
     }
 
+    /* 確認卡片------------------------------- */
+    .confirm{
+        width: 100%;
+        background-color: white;
+        border-radius: 8px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.10));
+        display: flex;
+        padding: 40px;
+        box-sizing: border-box;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    .confirmWrapper{
+        display: flex;
+        justify-content: space-between;
+        color: #223F9A;
+        width: 100%;
+    }
+
+    .confirm button{
+        background-color: #223F9A;
+        border-radius: 8px;
+        min-width: 256px;
+        height: 52px;
+        margin-left: 40px;
+    }
+
+    .milagePrice{
+        display: flex;
+        align-items: baseline;
+    }
+
+    .milagePrice h4{
+        margin-right: 4px;
+    }
+
+
+    .confirm button a{
+        color: white;
+        text-decoration: none;
+    }
+
+    .confirm span{
+        font-size: 20px;
+    }
+
     /* 完整航班細節popup---------------------- */
 
     .fullDetail{
@@ -257,6 +305,7 @@
         top: 16px;
         color: #223F9A;
         font-size: 32px;
+        cursor: pointer;
     }
 
     .fullDetailLeft{
@@ -394,128 +443,7 @@
         justify-content: space-between;
     }
 
-    /* 選天----------------------------------- */
-    .daySel{
-        width: 100%;
-        height: 104px;
-        border-radius: 8px;
-        background-color: #fff;
-        margin-bottom: 32px;
-        justify-content: space-between;
-        display: flex;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.10) );
-    }
-
-    .dayWrapper {
-        display: flex;
-        gap: 8px;
-        padding: 9px 0;
-        box-sizing: border-box;
-        overflow-x: auto;
-        /* scroll-behavior: smooth; */
-        flex: 1;
-    }
-    
-    .dayWrapper li {
-        cursor: pointer;
-        color: #7D7D7D;
-        min-width: 160px;
-        height: 100%;
-        text-align: center;
-        padding: 22px 0;
-        box-sizing: border-box;
-        border-radius: 8px;
-        flex: 0 0 auto;
-    }
-    
-    .dayWrapper::-webkit-scrollbar {
-        display: none;
-    }
-
-    .dayWrapper li.selected {
-        background-color: #DDE2F5;
-        color: #223F9A;
-        font-weight: bold;
-    }
-
-    .daySel button{
-        min-width: 56px;
-        padding: 0;
-    }
-
-    /* .dayWrapper li:nth-child(4){
-        background-color:#DDE2F5;
-        color: #223F9A;
-        font-weight: bold;
-    } */
-    
-    .dayWrapper h4{
-        margin-bottom: 8px;
-    }
-
-    /* 手機版艙等頁籤----------------------------------- */
-    .classMobile {
-        width: 100%;
-        border-radius: 8px;
-        overflow: hidden;
-        margin-bottom: 32px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        display: none;
-    }
-    
-    .tab {
-        display: flex;
-        width: 100%;
-    }
-    
-    .tab-item {
-        flex: 1;
-        text-align: center;
-        padding: 20px 0;
-        box-sizing: border-box;
-        cursor: pointer;
-    }
-    
-    .tab-item h4 {
-        font-size: 20px;
-        font-weight: bold;
-        margin: 0 0 8px 0;
-    }
-    
-    .tab-item p {
-        font-size: 16px;
-        margin: 0;
-    }
-    
-    .tab-item span {
-        font-size: 24px;
-        font-weight: bold;
-    }
-    
-    .tab-item.active {
-        background-color: #DDE2F5;
-        color: #223F9A;
-    }
-    
-    /* .tab-item:not(.active) {
-        background-color: #223F9A;
-        color: #304296;
-    }
-    
-    .tab-item:nth-child(2) {
-        background-color: #FF4B4B;
-        color: white;
-    }
-    
-    .tab-item.active:nth-child(2) {
-        background-color: #FF4B4B;
-    }*/
-    
-    .tab-item:not(.active):nth-child(2) {
-        background-color: white;
-        color: #012064;
-    }
-
+   
     /* 航班 卡片---------------------------------------- */
     
     .filter{
@@ -526,10 +454,6 @@
     .tickets > li{
         margin-bottom: 32px;
     }
-
-    /* .tickets:last-child{
-        margin-bottom: 128px;
-    } */
 
     .tickets .card{
         display: flex;
@@ -585,220 +509,7 @@
         height: 3px;
    }
 
-   /* 艙等按鈕------------------------------------ */
-   .tickets button{
-        min-width: 56px;
-        /* background: none; */
-        color: #223F9A;
-        /* cursor: pointer; */
-        /* border: none; */
-   }
-
-   /* 艙等選擇------------------------------------ */
-    .class{ 
-        width: 596px;
-        overflow: hidden;
-    }
-
-    .classSel{
-        display: flex;
-        position: relative;
-    }
-
-    .classSel li{
-        min-width: 298px;
-        height: 187px;
-        color: white;
-        padding: 27px 24px;
-        box-sizing: border-box;
-        border-right: 2px solid #fff;
-        cursor: pointer;
-    }
-
-    .classWrapper > :first-child{
-        margin-bottom: 77px;
-    }
-
-    .priceFrom{
-        display: flex;
-        margin-bottom: 4px; 
-        align-items: flex-end;
-    }
-
-    .price{
-        display: flex;
-        align-items: flex-end;
-    }
-
-    .priceFrom h2{
-        margin-right: 6px;
-    }
-
-    .priceFrom h5{
-        margin-right: 6px;
-    }
-
-    .econ{
-        background-color: #223F9A;
-    }
-
-    .econPrem{
-        background-color: #012064;
-    }
-
-    .busi{
-        background-color: #B01F24;
-    }
-
-    .first{
-        background-color: #701e96;
-    }
-
-    .priceLine {
-        width: 100%;
-        height: 4px;
-        border-radius: 4px;
-        background-color: #fff;
-    }
-
-/* 票等細節 下拉視窗------------------------------------------------- */
-
-.colorBar{
-    width: 100%;
-    height: 16px;
-    background-color: #223F9A;
-}
-
-#darkBar{
-    background-color: #012064;
-}
-
-#redBar{
-    background-color: #b01f24;
-}
-
-#purpleBar{
-    background-color: #701e96;
-}
-
-.levels{
-    width: 100%;
-    /* height: 610px; */
-    background-color: #fff;
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.10));
-    display: flex;
-}
-
-/* @media screen and (max-width: 1312px){
-
-    .levels{
-width: 60%;
-    }
-}
-
-
-@media screen and (max-width: 600px){
-
-    .levels{
-width: 100%;
-    }
-} */
-
-
-/* .levels.hide{
-    display: none;
-} */
-
-.levels .top{
-    background-color: #DDE2F5;
-    color: #304296;
-    padding: 32px;
-}
-
-.levels .top > :first-child{
-    margin-bottom: 16px;
-    font-weight: bold;
-    color: #061A3A;
-}
-
-.levelPrice{
-    display: flex;
-    align-items: flex-end;
-}
-
-.levels li{
-    flex-grow: 1;
-    outline: 1px solid #F1F6FF;
-    min-width: 256px;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    background-color: white;
-    cursor: pointer;
-}
-
-
-.levels .level4 .top h5{
-    margin-bottom: 20px;
-}
-
-.level4E .compare{
-    height: 496px;
-    background-image: url('../img/prem.png');
-    background-size:cover;
-    background-position: -150px;
-    /* border-radius: 0 0 8px 0; */
-}
-
-.level4EP .compare{
-    height: 496px;
-    background-image: url('../img/busi.jpg');
-    background-size:cover;
-    background-position: -250px;
-}
-
-.level4B .compare{
-    height: 496px;
-    background-image: url('../img/first.jpg');
-    background-size:cover;
-    background-position: -350px;
-}
-
-.level4F .compare{
-    height: 496px;
-    background-image: url('../img/tokyo.jpg');
-    background-size:cover;
-    background-position: -900px;
-}
-
-.compare{
-    padding: 32px;
-    box-sizing: border-box;
-    /* background-color: rgb(255, 255, 255); */
-}
-
-.compItem{
-    display: flex;
-    margin-bottom: 8px;
-    color: #cacaca;
-    align-items: baseline;
-}
-
-.compare .upgrade{
-    display: flex;
-    justify-content: space-between;
-}
-
-.compare p{
-    margin-bottom: 32px;
-    padding: 0 18px;
-    color:#012064;
-}
-
-.upgrade p{
-    margin-bottom: 8px;
-}
-
+   
 /* 航班細節overlay-------------------------------- */
 
 .flightDetail{
@@ -995,40 +706,34 @@ footer h6{
 /* 動畫------------------------------------------------- */
 
 /* 票等hover------------------------------------- */
-.levels li .bg-image {
+.card{
+    overflow: hidden;
+    transition: transform 0.7s ease-out,filter 0.7s ease-out;
+}
+
+.card > *{
+    z-index: 2;
+}
+
+.card .arriveBg {
     position: absolute;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 200%;
     background-image: url('../img/plane-arrival-solid.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 375px 281px;
     transition: transform 0.7s ease-out, opacity 0.7s ease;
-    transform: translateY(-500px);
+    transform: translateY(-20px);
     opacity: 0;
     z-index: 0;
+
 }
 
-.levels li:hover .bg-image {
-    transform: translateY(-400px);
+.card:hover .arriveBg {
+    transform: translateY(30px);
     opacity: 1;
-}
-
-.levels li .top, .levels li .compare {
-    position: relative;
-    z-index: 2;
-}
-
-/* 航班細節hover----------------------------------- */
-.card{
-    overflow: hidden;
-    transition: transform 0.7s ease-out,filter 0.7s ease-out;
-    cursor: pointer;
-}
-
-.card > *{
-    z-index: 2;
 }
 
 .card .departBg {
@@ -1051,7 +756,7 @@ footer h6{
     opacity: 1;
 }
 
-.depart .card:hover{
+.card:hover{
     transform: scale(1.01);
     filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.10));
 }

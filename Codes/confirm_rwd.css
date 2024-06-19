@@ -110,6 +110,14 @@
     .fullDetailRight > :first-child{
         margin:64px 0 16px 0;
     }
+
+    .confirm .milagePrice{
+        flex-direction: column;
+    }
+    
+    .confirm button{
+        min-width: 25vw;
+    }
 }
 
 @media screen and (max-width: 700px){
@@ -196,7 +204,7 @@
 
     .depart .card{
         padding: 28px 16px;
-        margin-bottom: 64px;
+        margin-bottom: 32px;
     }
 
     .depart .card button{
@@ -218,68 +226,9 @@
     .depart .arrive{
         min-width: 100px;
     }
-    
-    .classMobile{
-        display: block;
-    }
-
-    .tickets > li{
-        margin-bottom: 16px;
-    }
-
-    .tickets .time{
-        display: none;
-    }
-
-    .tickets button{
-        min-width: 38px;
-        height: 120px;
-        display: none;
-    }
-
-    .classSel li{
-        padding: 19px 12px;
-    }
-
-    .classWrapper > :first-child{
-        margin-bottom: 32px;
-    }
-
-    .priceFrom{
-        display: block;
-    }
-
-    .priceLine{
-        display: none;
-    }
-
-    .infoWrapper{
-    padding: 42px 9px;
-    }
-
-    .daySel{
-        height: 90px;
-    }
-
-    .dayWrapper li{
-        padding: 16px 0;
-    }
 
     footer img{
         height: 20px;
-    }
-
-    .flightDetail .content{
-        padding: 16px;
-        padding-bottom: 36px;
-    }
-
-    .flightDetail .bottom{
-        display: none;
-    }
-
-    .flightDetail .bottomMobile{
-        display: flex;
     }
 
     .fullDetail{
@@ -306,6 +255,26 @@
 
     .fullDetail .flightNo{
         margin-bottom: 4px;
+    }
+
+    .confirm{
+        flex-direction: column;
+        padding: 16px;
+        margin-top: 64px;
+    }
+
+    .confirmWrapper{
+        margin-bottom: 16px;
+        width: 100%;
+    }
+
+    .confirm span{
+        font-size: 14px;
+    }
+
+    .confirm button{
+        margin: 0 auto;
+        width: 100%;
     }
 
 }

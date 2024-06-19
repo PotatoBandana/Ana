@@ -38,6 +38,10 @@
         font-size: 16px;
     }
 
+    a{
+        text-decoration: none;
+    }
+
     svg{
         margin-right: 4px;
         font-size: 16px;
@@ -455,6 +459,7 @@ width: 100%;
     z-index: 1;
     overflow: hidden;
     background-color: white;
+    cursor: pointer;
 }
 
 
@@ -689,7 +694,7 @@ width: 100%;
 /* footer----------------------------------------- */
 footer{
     background-color: #304296;
-    margin-top: auto;
+    margin-top: 128px;
 }
 
 .footerWrapper{
@@ -741,24 +746,34 @@ footer h6{
 
 /* 航班細節hover----------------------------------- */
 
-/* .info::after {
-    content: "";
-    background-image: url('../img/passport-solid.svg');
-    background-repeat: no-repeat;
-    position: absolute;
-    top: -50px;
-    width: 400px;
-    height: 350px;
-    z-index: -1;
-    opacity: 0;
-
-    transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out;
+.card{
+    overflow: hidden;
 }
 
-.infoWrapper:hover .info::after {
+.infoWrapper div{
+    z-index: 2;
+}
+
+.card .infoBg {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-image: url('../img/circle-info-solid.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 250px 250px;
+    transition: transform 0.7s ease-out, opacity 0.7s ease;
+    transform: translateY(50px);
+    opacity: 0;
+    z-index: 0;
+}
+
+.infoWrapper:hover .infoBg {
+    transform: translateY(-150px);
     opacity: 1;
-    top: -150px;
-} */
+}
+
 
 /* 按鈕hover--------------------------------------- */
 .scrollLeft:hover{
