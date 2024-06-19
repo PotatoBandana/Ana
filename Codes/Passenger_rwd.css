@@ -125,13 +125,24 @@
         margin-bottom: 16px;
         justify-content:center;
         gap: 32px;  
-     }
+    }
+
+    .footerWrapper{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .footerWrapper a{
+        margin: 8px auto;
+    }
+
+    .footerWrapper h6{
+        margin: 0 auto;
+        padding-bottom: 8px;
+    }
 
 }
 
 @media screen and (max-width: 393px){
-    .steps{
-        /* width: 12vw; */
-    }
 }
     

@@ -277,6 +277,20 @@
         width: 100%;
     }
 
+    .footerWrapper{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .footerWrapper a{
+        margin: 8px auto;
+    }
+
+    .footerWrapper h6{
+        margin: 0 auto;
+        padding-bottom: 8px;
+    }
+
 }
 
 
