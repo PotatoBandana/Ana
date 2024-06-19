@@ -197,11 +197,6 @@
         display: flex;
     }
 
-    .flightDetail .depart{
-        min-width: none;
-    }
-    
-
     .footerWrapper{
         flex-direction: column;
         height: auto;
