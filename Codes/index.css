@@ -719,6 +719,16 @@ footer h6{
 /* 動畫------------------------------------------------- */
 
 /* 票等hover------------------------------------- */
+.levels li {
+    transition: flex-grow 0.3s ease; 
+
+}
+
+.levels li:hover{
+    flex-grow: 2.5;
+    background-color: #F1F6FF;
+}
+
 .levels li .bg-image {
     position: absolute;
     left: 0;
