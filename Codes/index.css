@@ -720,12 +720,12 @@ footer h6{
 
 /* 票等hover------------------------------------- */
 .levels li {
-    transition: flex-grow 0.3s ease; 
+    transition: flex-grow 0.3s ease, background-color 0.3s ease;
 
 }
 
 .levels li:hover{
-    flex-grow: 2.5;
+    flex-grow: 3;
     background-color: #F1F6FF;
 }
 
@@ -779,6 +779,10 @@ footer h6{
     z-index: 0;
 }
 
+/* .infoWrapper:hover{
+    background-color: #F1F6FF;
+} */
+
 .infoWrapper:hover .infoBg {
     transform: translateY(-150px);
     opacity: 1;
@@ -787,11 +791,11 @@ footer h6{
 
 /* 按鈕hover--------------------------------------- */
 .scrollLeft:hover{
-    background-color: #f4f4f4;
+    background-color: #F1F6FF;
     /* background: linear-gradient(to left, #e6ecff, white); */
 }
 .scrollRight:hover{
-    background-color: #f4f4f4;
+    background-color: #F1F6FF;
     /* background: linear-gradient(to left, white, #e6e6e6); */
 }
 

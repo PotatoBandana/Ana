@@ -131,6 +131,10 @@ window.onload = function(){
             $(target).slideToggle(400, function() {});
         }, 400);
         console.log(target);
+
+        var scroll = $(this).offset().top;
+        $('html,body').animate({scrollTop: scroll}, 500)
+        return false;
     })
         
  // 航班細節popup-------------------------------------

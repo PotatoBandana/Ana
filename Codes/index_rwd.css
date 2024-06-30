@@ -67,7 +67,7 @@
     }
 
     header img{
-        display: none;
+        /* display: none; */
     }
 
     header h4{
@@ -178,6 +178,7 @@
 
     .dayWrapper li{
         padding: 16px 0;
+        min-width: 110px;
     }
 
     footer img{

@@ -1001,7 +1001,7 @@ footer h6{
 }
 
 .levels li:hover{
-    flex-grow: 2.5;
+    flex-grow: 3;
     background-color: #F1F6FF;
 }
 
@@ -1066,13 +1066,22 @@ footer h6{
     filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.10));
 }
 
+/* .infoWrapper:hover{
+    background-color: #F1F6FF;
+} */
+
+.infoWrapper:hover .infoBg {
+    transform: translateY(-150px);
+    opacity: 1;
+}
+
 /* 按鈕hover--------------------------------------- */
 .scrollLeft:hover{
-    background-color: #f4f4f4;
+    background-color: #f1f6ff;
     /* background: linear-gradient(to left, #e6ecff, white); */
 }
 .scrollRight:hover{
-    background-color: #f4f4f4;
+    background-color: #f1f6ff;
     /* background: linear-gradient(to left, white, #e6e6e6); */
 }
 

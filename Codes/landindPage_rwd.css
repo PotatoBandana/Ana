@@ -1,0 +1,151 @@
+@media screen and (max-width: 1440px){
+
+    .mainWrapper{
+        width: auto;
+    }
+
+    .info{
+        width: 33.3vw;
+    }
+
+    .class li{
+        min-width: 50%;
+    }
+
+}
+
+@media screen and (max-width: 1145px){
+
+    .mainWrapper{
+        padding: 0 16px;
+    }
+
+    .headerWrapper{
+        padding: 0 16px;
+    }
+    
+   .searchWrapper{
+    width: 100%;
+   }
+
+   .moreOption{
+    width: 100%;
+   }
+}
+
+@media screen and (max-width: 700px){
+
+    header{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        filter: drop-shadow(0 0px 4px 4px rgba(0, 0, 0, 0.10));
+        z-index: 1;
+    }
+
+    header img{
+        /* display: none; */
+    }
+
+    header h4{
+        display: block;
+        line-height: 50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    header p{
+        display: none;
+    }
+
+    .steps{
+        width: 79vw;
+        height: 10vw;
+        margin: 70px auto 36px auto;
+    }
+    
+    .title{
+        display: none;
+    }
+
+    .info{
+        width: 50vw;
+    }
+
+    .flightNo{
+        top: 9px;
+        left: 7px;
+    }
+
+    .flightNo i{
+        font-size: 14px;
+    }
+
+    .class li{
+        /* height: 27vw; */
+        height: 120px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    h3{
+        font-size: 16px;
+    }
+
+    h4{
+        font-size: 14px;
+    }
+
+    h5{
+        font-size: 14px;
+    }
+
+    h6{
+        font-size: 12px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .moreOption{
+        flex-wrap: wrap;
+    }
+
+    .moreOption li{
+        flex: 1 1 calc(50% - 16px); 
+        min-width: calc(50% - 16px);
+    }
+
+    .travelInfo{
+        float: none;
+        margin: 32px auto;
+    }
+
+    footer img{
+        height: 20px;
+    }
+
+    .footerWrapper{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .footerWrapper a{
+        margin: 8px auto;
+    }
+
+    .footerWrapper h6{
+        margin: 0 auto;
+        padding-bottom: 8px;
+    }
+}
+
+
+
+@media screen and (max-width: 393px){
+}
+    
