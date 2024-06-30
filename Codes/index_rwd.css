@@ -24,36 +24,13 @@
         padding: 0 16px;
     }
     
-    .levels{
-        /* overflow: hidden; */
-        overflow-x: auto;
-    }
+   .searchWrapper{
+    width: 100%;
+   }
 
-    .infoWrapper{
-        padding: 66px 4.4vw;
-        
-    }
-
-    /* .classWrapper > :first-child{
-        margin-bottom: 49px;
-    }*/
-
-    .class li{
-        min-width: 100%;
-        border-right: none;
-    }
-
-    .info{
-        width: 40vw;
-    }
-
-    .flightDetail .popup{
-        width: 67.5vw;
-    }
-
-    .footerWrapper{
-        padding: 0 16px;
-    }
+   .moreOption{
+    width: 100%;
+   }
 }
 
 @media screen and (max-width: 700px){
@@ -134,68 +111,30 @@
         font-size: 14px;
     }
 
-    .classMobile{
-        display: block;
+    .moreOption{
+        flex-wrap: wrap;
     }
 
-    .tickets > li{
-        margin-bottom: 16px;
+    .moreOption li{
+        flex: 1 1 calc(50% - 16px); 
+        min-width: calc(50% - 16px);
     }
 
-    .tickets .time{
-        display: none;
+    .travelInfo{
+        float: none;
+        margin: 32px auto;
     }
 
-    .tickets button{
-        min-width: 38px;
-        height: 120px;
-        display: none;
+    .search > *{
+        flex-direction: column;
     }
 
-    .classSel li{
-        padding: 19px 12px;
-    }
-
-    .classWrapper > :first-child{
-        margin-bottom: 32px;
-    }
-
-    .priceFrom{
-        display: block;
-    }
-
-    .priceLine{
-        display: none;
-    }
-
-    .infoWrapper{
-    padding: 42px 9px;
-    }
-
-    .daySel{
-        height: 90px;
-    }
-
-    .dayWrapper li{
-        padding: 16px 0;
-        min-width: 110px;
+    .search button{
+        width: 85vw;
     }
 
     footer img{
         height: 20px;
-    }
-
-    .flightDetail .content{
-        padding: 16px;
-        padding-bottom: 36px;
-    }
-
-    .flightDetail .bottom{
-        display: none;
-    }
-
-    .flightDetail .bottomMobile{
-        display: flex;
     }
 
     .footerWrapper{

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href='./Codes/Return.css'>
-    <link rel="stylesheet" href='./Codes/Return_rwd.css'>
+    <link rel="stylesheet" href='./Codes/depart.css'>
+    <link rel="stylesheet" href='./Codes/depart_rwd.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Document</title>
 </head>
@@ -15,7 +15,7 @@
             <a href="index.html">
                 <img src="./img/ana-logo.png" alt="">
             </a>
-            <h4>選擇回程</h4>
+            <h4>選擇去程</h4>
             <div class='user'>
                 <a href="" class="help">
                     <i class="fa-solid fa-circle-question"></i>
@@ -35,170 +35,11 @@
 <!-- main----------------------------------------- -->
     <div class="mainWrapper">
         <div class="steps">
-            <img src="img/step2.png" alt="">
+            <img src="img/step1.png" alt="">
         </div>
+        <h3 class = 'title'>選擇去程</h3>
 
-        <!-- 去程卡片 -->
-        <div class="depart" id="departCard">
-            <div class="departWrapper">
-                <div class="title">
-                    <h3>去程 <span>台北-東京</span></h3>
-                    <h5>出發時間:2024年6月1日星期六</h5>
-                </div>
-                <div class="card">
-                    <div class="left">
-                        <div class="start">
-                            <div class="startTime">
-                                <h2>16:50</h2>
-                                <h2>台北</h2>
-                            </div>
-                            <h5>台北松山機場</h5>
-                        </div>
-                        <div class="trip">
-                            <div class="time">
-                                <i class="fa-solid fa-clock"></i>
-                                <h4>3h 00m</h4>
-                            </div>
-                            <div class="line"></div>
-                        </div>
-    
-                        <div class="arrive">
-                            <div class="arriveTime">
-                                <h2>20:50 </h2>
-                                <h2>東京</h2>
-                            </div>
-                            <h5>東京成田機場</h5>
-                        </div>
-                    </div>
-                    <div class="middle">
-                        <h2>經濟艙</h2>
-                        <h5>Basic</h5>
-                    </div>
-                    <div class="right">
-                        <button>
-                           <a href="depart.html"><h4>修改</h4></a>
-                        </button>
-                    </div>
-                    <div class="departBg"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 完整航班細節popup -------------------------->
-        <div class="fullDetail" id="departDetail">
-            <div class="fullDetailWrapper">
-                <i class="fa-solid fa-circle-xmark close-icon"></i>
-                <section class="fullDetailLeft">
-                    <h2>航班資訊</h2>
-                    <div class="title">
-                        <h3>台北</h3>
-                        <h5>出發時間: 2024年6月1日星期六</h5>
-                    </div>
-                    <div class="stops">
-                        <div class="flightNo">
-                            <h5>全日本航空 <img src="img/AnaTail.png" alt=""></h5>
-                            <h5>波音 787-8</h5>
-                        </div>
-                        <h5>NH9527</h5>
-                        
-
-                        <div class="content">
-                            <div class="start">
-                                <div class="startTime">
-                                    <h2>16:50</h2>
-                                    <h2>台北</h2>
-                                </div>
-                                <h5>台北松山機場</h5>
-                            </div>
-                            <div class="trip">
-                                <div class="time">
-                                    <i class="fa-solid fa-clock"></i>
-                                    <h4>3h 00m</h4>
-                                </div>
-                                <div class="line"></div>
-                            </div>
-
-                            <div class="arrive">
-                                <div class="arriveTime">
-                                    <h2>20:50 </h2>
-                                    <h2>東京</h2>
-                                </div>
-                                <h5>東京成田機場</h5>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <div class="divider"></div>
-
-                <section class="fullDetailRight">
-                    <h2>經濟艙 <span>Basic</span></h2>
-                    <div class="list">
-                        <ul>
-                            <li class="compItem">
-                                <div class="item">
-                                    <i class="fa-solid fa-suitcase-rolling"></i>
-                                    <h6>免費行李</h6>
-                                </div>
-                                <p>2件 / 23公斤 (50磅) </p>
-                            </li>
-                                    
-                            <li class="compItem">
-                                <div class="item">
-                                    <i class="fa-solid fa-right-left"></i>
-                                    <h6>更改</h6>
-                                </div>
-                                <p>可以 (有手續費)</p>
-                            </li>
-                                        
-                            <li class="compItem">
-                                <div class="item">
-                                    <i class="fa-solid fa-plane-circle-xmark"></i>
-                                    <h6>退票</h6>
-                                </div>
-                                <p>不可以</p>
-                            </li>
-                                        
-                            <li class="compItem">
-                                <div class="item">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><path fill="currentColor" d="M224 232a8 8 0 0 1-8 8H112a8 8 0 0 1 0-16h104a8 8 0 0 1 8 8m-16-88h-64.22L112 80l14.19-26.32a1.5 1.5 0 0 0 .11-.22A16 16 0 0 0 119.15 32l-.47-.22L85 17.57a16 16 0 0 0-21.2 7.27l-22.12 44a16.1 16.1 0 0 0 0 14.32l58.11 116a15.93 15.93 0 0 0 14.32 8.84H208a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16"/></svg>
-                                    <h6>預選座位</h6>
-                                </div>
-                                <p>可以</p> 
-                            </li>
-                            
-                            <li class="compItem">
-                                <div class="item">
-                                    <i class="fa-solid fa-crown"></i>
-                                    <h6>貴賓室</h6>
-                                </div>
-                                <p>無法使用</p>                                      
-                            </li>
-                                        
-                            <li class="compItem">
-                                <div class="item">
-                                    <i class="fa-solid fa-circle-up"></i>
-                                    <h6>升艙等</h6>
-                                </div>
-                                <ul>
-                                    <li class="upgrade">
-                                        <p>豪華經濟艙:</p>
-                                        <p>無</p>
-                                    </li>
-                                    <li class="upgrade">
-                                        <p>商務艙:</p>
-                                        <p>無</p>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="bg-image"></div>
-                    </div>
-                </section>
-            </div>
-        </div>
         <!-- 選天--------------------------------- -->
-        <h3 class = 'title'>選擇回程</h3>
         <div class="daySel">
             <button class="dayLeft">
                 <i class="fa-solid fa-angle-left"></i>
@@ -333,6 +174,7 @@
                                 <h2>20:50</h2>
                             </div>
                         </div>
+                        <i class="infoBg"></i>
                     </div>
 
                     <button class="scrollLeft" id="t1Left">
@@ -402,9 +244,9 @@
                 </div>
                 <!-- 票等細節 下拉視窗 ------------------------------>
                 <div style='display: none;' class="levelWrapper" id="t1EList">
-                    <div class="colorBar" id="blue" ></div>
+                    <div class="colorBar" id="blueBar" ></div>
                     <ul class="levels">
-                        <li class="level1"><a href="confirm.html">
+                        <a href="Return.html"><li class="level1">
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
@@ -455,11 +297,12 @@
                             </div>
                             <div class="bg-image"></div>
                         </a></li>
-                        <li class="level2">
+
+                        <a href="Return.html"><li class="level2">
                             <div class="top">
-                                <h5>Super Value</h5>
+                                <h5>Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>8,210</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -505,12 +348,12 @@
                                 </div>
                             </div>
                             <div class="bg-image"></div>
-                        </li>
-                        <li class="level3">
+                        </a></li>
+                        <li class="level3"><a href="Return.html">
                             <div class="top">
-                                <h5>Super Value</h5>
+                                <h5>Basic</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>8,881</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -556,10 +399,10 @@
                                 </div>
                             </div>
                             <div class="bg-image"></div>
-                        </li>
-                        <li class="level4 level4E">
+                        </a></li>
+                        <li class="level4 level4E t">
                             <div class="top">
-                                <h5>豪華經濟艙</h5>
+                                <h5>商務艙</h5>
                                 <div class="price">
                                     <h3>享有更多空間</h3>
                                 </div>
@@ -575,7 +418,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>9,527</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -626,7 +469,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>10,271</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -677,7 +520,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>12,123</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -742,7 +585,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>15,470</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -793,7 +636,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>16,607</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -844,7 +687,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>18,888</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -909,7 +752,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>20,470</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -960,7 +803,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>22,211</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -1011,7 +854,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>25,471</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -1060,7 +903,7 @@
                         </li>
                         <li class="level4 level4F">
                             <div class="top">
-                                <h5>商務艙</h5>
+                                <h5>頭等艙</h5>
                                 <div class="price">
                                     <h3>最奢華的空中體驗</h3>
                                 </div>
@@ -1095,6 +938,7 @@
                                 <h2>20:50</h2>
                             </div>
                         </div>
+                        <i class="infoBg"></i>
                     </div>
 
                     <button class="scrollLeft" id="t2Left">
@@ -1135,7 +979,7 @@
                                     <div class="priceFrom">
                                         <h5>從</h5>
                                         <div class="price">
-                                            <h2>15,470</h2>
+                                            <h2>14,227</h2>
                                             <h4>TWD</h4>
                                         </div>
                                     </div>
@@ -1148,7 +992,7 @@
                                     <div class="priceFrom">
                                         <h5>從</h5>
                                         <div class="price">
-                                            <h2>20,470</h2>
+                                            <h2>19,527</h2>
                                             <h4>TWD</h4>
                                         </div>
                                     </div>
@@ -1170,7 +1014,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>7,741</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -1221,7 +1065,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>8,071</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -1272,7 +1116,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>8,771</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -1337,7 +1181,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>9,527</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -1388,7 +1232,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>10,608</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -1439,7 +1283,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>11, 471</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -1504,7 +1348,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>14,227</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -1555,7 +1399,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>16,888</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -1606,7 +1450,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>18,012</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -1671,7 +1515,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>19,527</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -1722,7 +1566,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>21,181</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -1773,7 +1617,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>22,471</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -1833,6 +1677,7 @@
                 </div>
                 
             </li>
+
             <!-- 卡3------------------------------ -->
             <li class="ticket3">
                 <div class="card">
@@ -1856,6 +1701,7 @@
                                 <h2>20:50</h2>
                             </div>
                         </div>
+                        <i class="infoBg"></i>
                     </div>
 
                     <button class="scrollLeft" id="t3Left">
@@ -1870,7 +1716,7 @@
                                     <div class="priceFrom">
                                         <h5>從</h5>
                                         <div class="price">
-                                            <h2>7,741</h2>
+                                            <h2>8,120</h2>
                                             <h4>TWD</h4>
                                         </div>
                                     </div>
@@ -1883,7 +1729,7 @@
                                     <div class="priceFrom">
                                         <h5>從</h5>
                                         <div class="price">
-                                            <h2>9,527</h2>
+                                            <h2>10,127</h2>
                                             <h4>TWD</h4>
                                         </div>
                                     </div>
@@ -1896,7 +1742,7 @@
                                     <div class="priceFrom">
                                         <h5>從</h5>
                                         <div class="price">
-                                            <h2>15,470</h2>
+                                            <h2>16,827</h2>
                                             <h4>TWD</h4>
                                         </div>
                                     </div>
@@ -1909,7 +1755,7 @@
                                     <div class="priceFrom">
                                         <h5>從</h5>
                                         <div class="price">
-                                            <h2>20,470</h2>
+                                            <h2>21,987</h2>
                                             <h4>TWD</h4>
                                         </div>
                                     </div>
@@ -1931,7 +1777,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>8,120</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -1982,7 +1828,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>8,468</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -2033,7 +1879,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>9,000</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -2078,7 +1924,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="bg-image"></div>    
+                            <div class="bg-image"></div>
                         </li>
                         <li class="level4 level4E">
                             <div class="top">
@@ -2098,7 +1944,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>10,127</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -2149,7 +1995,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>12,155</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -2200,7 +2046,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>13,471</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -2265,7 +2111,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>16,827</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -2316,7 +2162,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>17,771</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -2367,7 +2213,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>18,342</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -2432,7 +2278,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>21,987</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -2483,7 +2329,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>23,983</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -2534,7 +2380,7 @@
                             <div class="top">
                                 <h5>Super Value</h5>
                                 <div class="levelPrice">
-                                    <h2>7,471</h2>
+                                    <h2>27,971</h2>
                                     <h5>TWD</h5>
                                 </div>
                             </div>
@@ -2593,7 +2439,7 @@
                     </ul>
                 </div>
                 
-            </li>        
+            </li>
         </ul>
     </div>
 

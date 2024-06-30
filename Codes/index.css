@@ -2,7 +2,7 @@
 
     body{
         font-family: 'Inter', 'Noto Sans TC', Arial;
-        background-color: #F8F8F8;
+        background-color: #e8e8e8;
     }
 
     h2{
@@ -106,6 +106,8 @@
         width: 100%;
     }
 
+    
+
     /* main------------------------------------ */
     .mainWrapper{
         width: 1280px;
@@ -113,7 +115,7 @@
         /* transform: scale(0.8); */
         margin: 0 auto;
         padding: 0 80px;
-        transition: padding 0.5s ease; 
+        transition: padding 0.5s ease;
     }
 
     .mainWrapper .title{
@@ -122,575 +124,219 @@
         margin-bottom: 32px;
     }
 
-    /* 選天----------------------------------- */
-    .daySel{
+    .mainWrapper img{
         width: 100%;
-        height: 104px;
-        border-radius: 8px;
-        background-color: #fff;
-        margin-bottom: 32px;
-        justify-content: space-between;
-        display: flex;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.10) );
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50px;
+        z-index: 0;
+        max-width: 1440px;
+        margin:  0 auto;
     }
 
-    .dayWrapper {
-        display: flex;
-        gap: 8px;
-        padding: 9px 0;
+    .searchWrapper{
+        background-color: #fff;
+        width: 937px;
+        border-radius: 16px;
+        margin: 0 auto;
+        margin-bottom: 32px;
+        margin-top: 230px;
+        padding: 24px 31px 32px 31px;
         box-sizing: border-box;
-        overflow-x: auto;
-        /* scroll-behavior: smooth; */
-        flex: 1;
+        position: relative; 
+        z-index: 2;
+        transition: width 0.3s ease;
+    }
+
+    .cursor{
+        position: absolute;
+        transition: top 1s ease, left 1s ease;
+        animation: cursorMove 10s ease-in-out forwards;
+        z-index: 3;
+        width: 30px !important;
     }
     
-    .dayWrapper li {
-        cursor: pointer;
-        color: #7D7D7D;
-        min-width: 160px;
-        height: 100%;
-        text-align: center;
-        padding: 22px 0;
-        box-sizing: border-box;
-        border-radius: 8px;
+    @keyframes cursorMove {
+        0% {
+            top: 60px;
+            left: 10px;
+        }
+        23% {
+            top: 200px;
+            left: -700px;
+        }
+        53% {
+            top: 200px;
+            left: 200px;
+        }
+        60% {
+            top: 200;
+            left: 400px; 
+        }
+        80% {
+            top: 570px; 
+            left: 500px; 
+        }
+
+        95% {
+            top: 570px; 
+            left: 500px;
+            scale: 100%; 
+        }
+
+        97% {
+            top: 570px; 
+            left: 500px; 
+            scale: 90%;
+        }
+
+        100% {
+            top: 570px; 
+            left: 500px; 
+            scale: 100%;
+        }
+    }
+
+    .searchWrapper .functions{
+        padding-left: 16px;
+        margin-bottom: 32px;
+        overflow-x: auto;
+        display: flex;
+    }
+
+    .searchWrapper .functions button{
+        height: 40px;
+        width: 105px;
+        margin-left: 16px;
+        border: 1px solid #9c9c9c;
+        border-radius: 20px;
+        font-size: 16px;
+        font-weight: bold;
         flex: 0 0 auto;
     }
-    
-    .dayWrapper::-webkit-scrollbar {
-        display: none;
+
+    .searchWrapper .functions > :first-child{
+        color: #012064;
+        border: 1px solid #012064;
+        background-color: #a5b1d6;
     }
 
-    .dayWrapper li.selected {
-        background-color: #DDE2F5;
-        color: #223F9A;
-        font-weight: bold;
-    }
-
-    .daySel button{
-        min-width: 56px;
-        padding: 0;
-    }
-
-    /* .dayWrapper li:nth-child(4){
-        background-color:#DDE2F5;
-        color: #223F9A;
-        font-weight: bold;
-    } */
-    
-    .dayWrapper h4{
-        margin-bottom: 8px;
-    }
-
-    /* 手機版艙等頁籤----------------------------------- */
-    .classMobile {
-        width: 100%;
-        border-radius: 8px;
-        overflow: hidden;
-        margin-bottom: 32px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        display: none;
-    }
-    
-    .tab {
+    .searchWrapper .tabs{
         display: flex;
-        width: 100%;
+        gap: 32px;
+        padding-left: 32px;
+        margin-bottom: 32px;
+        border-bottom: 1px solid #7D7D7D;
+        line-height: 40px;
+        font-weight: bold;
     }
-    
-    .tab-item {
-        flex: 1;
-        text-align: center;
-        padding: 20px 0;
+
+    .tabs > :first-child{
+        color: #012064;
+        border-bottom: 3px solid #012064;
+    }
+
+    .search input{
+        height: 60px;
+        border-radius: 32px;
+        padding: 24px;
         box-sizing: border-box;
-        cursor: pointer;
-    }
-    
-    .tab-item h4 {
-        font-size: 20px;
+        border: 1px solid #9c9c9c;
+        flex-grow: 1;
         font-weight: bold;
-        margin: 0 0 8px 0;
-    }
-    
-    .tab-item p {
-        font-size: 16px;
-        margin: 0;
-    }
-    
-    .tab-item span {
-        font-size: 24px;
-        font-weight: bold;
-    }
-    
-    .tab-item.active {
-        background-color: #DDE2F5;
-        color: #223F9A;
-    }
-    
-    /* .tab-item:not(.active) {
-        background-color: #223F9A;
-        color: #304296;
-    }*/
-    
-    /* .tab-item:nth-child(2) {
-        background-color: #FF4B4B;
-        color: white;
-    }
-    
-    .tab-item.active:nth-child(2) {
-        background-color: #FF4B4B;
-    } */
-    
-    .tab-item:not(.active):nth-child(2) {
-        background-color: white;
         color: #012064;
     }
 
-    /* 航班 卡片---------------------------------------- */
-    
-    .filter{
-        margin-bottom: 12px;
-        color: #A1A1A1;
+    .search input::placeholder {
+        color: #012064;
+        opacity: 1; 
     }
 
-    .tickets > li{
+    .search > *{
         margin-bottom: 32px;
-    }
-
-    .tickets .card{
         display: flex;
-        background-color: #fff;
-        /* outline: 1px solid red; */
-        border-radius: 8px;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.10) );
+        gap: 16px;
+        justify-content: space-between  ;
     }
 
-    .infoWrapper{
-        /* width: 572px; */
-        padding: 66px 46px;
-        position: relative;
-        cursor: pointer;
-        /* margin: auto; */
+    .coupon input{
+        width: 100%;
     }
 
-    .tickets .flightNo{
-        display: flex;
-        position: absolute;
-        top: 18px;
-        left: 16px;
-        color: #A1A1A1;
+    .coupon input::placeholder{
+        color: #9c9c9c;
+        font-weight: normal;
     }
     
-    .info{
-        color: #223F9A;
-        width: 480px;
+    .send{
+        align-items: center;
     }
 
-    .info div{
-        display: flex;
-        justify-content: space-between;
+    .send .left a{
+        margin: 16px;
     }
 
-    .time{
-        color: #7488C2;
-    }
-
-    .time h4{
-        color: #304296;
-    }
-
-    .info2{
-        align-items: flex-start;
-    }
-
-    .line{
-        background-color: #7488C2;
-        border-radius: 3px;
-        margin: 4px 16px;
-        width: 100%;
-        height: 3px;
-   }
-
-   /* 艙等按鈕------------------------------------ */
-   .tickets button{
-        min-width: 56px;
-        /* background: none; */
-        color: #223F9A;
-        /* cursor: pointer; */
-        /* border: none; */
-   }
-
-   /* 艙等選擇------------------------------------ */
-    .class{ 
-        width: 596px;
-        overflow: hidden;
-    }
-
-    .classSel{
-        display: flex;
-        position: relative;
-    }
-
-    .classSel li{
-        min-width: 298px;
-        height: 187px;
-        color: white;
-        padding: 27px 24px;
-        box-sizing: border-box;
-        border-right: 2px solid #fff;
-        cursor: pointer;
-    }
-
-    .classWrapper > :first-child{
-        margin-bottom: 77px;
-    }
-
-    .priceFrom{
-        display: flex;
-        margin-bottom: 4px; 
-        align-items: flex-end;
-    }
-
-    .price{
-        display: flex;
-        align-items: flex-end;
-    }
-
-    .priceFrom h2{
-        margin-right: 6px;
-    }
-
-    .priceFrom h5{
-        margin-right: 6px;
-    }
-
-    .econ{
-        background-color: #223F9A;
-    }
-
-    .econPrem{
+    .search button{
         background-color: #012064;
+        padding: 16px;
+        color: #fff;
+        border-radius: 25px;
+        font-weight: bold;
+        width: 288px;
     }
 
-    .busi{
-        background-color: #B01F24;
+    #searchBtn.changed {
+        background-color: #304296;
+        transition: background-color 0.3s ease;
+    }
+    
+    
+    .moreOption{
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+        width: 937px;
+        margin: 0 auto;
+        gap: 16px;
     }
 
-    .first{
-        background-color: #701e96;
-    }
-
-    .priceLine {
-        width: 100%;
-        height: 4px;
-        border-radius: 4px;
+    .moreOption li{
         background-color: #fff;
+        color: #333;
+        border-radius: 16px;
+        padding: 16px 24px;
+        box-sizing: border-box;
+        height: 152px;
+        text-align: center;
+        flex: 1;
+        min-width: 0; 
+        transition: width 0.3s ease;
     }
 
-/* 票等細節 下拉視窗------------------------------------------------- */
-
-.colorBar{
-    width: 100%;
-    height: 16px;
-    background-color: #223F9A;
-}
-
-#darkBar{
-    background-color: #012064;
-}
-
-#redBar{
-    background-color: #b01f24;
-}
-
-#purpleBar{
-    background-color: #701e96;
-}
-
-
-.levels{
-    width: 100%;
-    /* height: 610px; */
-    background-color: #fff;
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.10));
-    display: flex;
-}
-
-/* @media screen and (max-width: 1312px){
-
-    .levels{
-width: 60%;
+    .moreOption li i{
+        font-size: 32px;
+        padding: 20px 0 32px 0;
+        margin-right: 0;
+        color: #333;
     }
-}
 
-
-@media screen and (max-width: 600px){
-
-    .levels{
-width: 100%;
+    .travelInfo{
+        height: 46px;
+        width: 288px;
+        border-radius: 23px;
+        border: 1px solid #012064;
+        color: #012064;
+        background-color: #fff;
+        font-weight: bold;
+        margin-top: 32px;
+        margin-right: 16px;
+        float: right;
     }
-} */
 
 
-/* .levels.hide{
-    display: none;
-} */
 
-.levels .top{
-    background-color: #DDE2F5;
-    color: #304296;
-    padding: 32px;
-}
-
-.levels .top > :first-child{
-    margin-bottom: 16px;
-    font-weight: bold;
-    color: #061A3A;
-}
-
-.levelPrice{
-    display: flex;
-    align-items: flex-end;
-}
-
-.levels li{
-    flex-grow: 1;
-    outline: 1px solid #F1F6FF;
-    min-width: 256px;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    background-color: white;
-    cursor: pointer;
-}
-
-
-.levels .level4 .top h5{
-    margin-bottom: 20px;
-}
-
-.level4E .compare{
-    height: 496px;
-    background-image: url('../img/prem.png');
-    background-size:cover;
-    background-position: -150px;
-    /* border-radius: 0 0 8px 0; */
-}
-
-.level4EP .compare{
-    height: 496px;
-    background-image: url('../img/busi.jpg');
-    background-size:cover;
-    background-position: -250px;
-}
-
-.level4B .compare{
-    height: 496px;
-    background-image: url('../img/first.jpg');
-    background-size:cover;
-    background-position: -350px;
-}
-
-.level4F .compare{
-    height: 496px;
-    background-image: url('../img/tokyo.jpg');
-    background-size:cover;
-    background-position: -900px;
-}
-
-.compare{
-    padding: 32px;
-    box-sizing: border-box;
-    /* background-color: rgb(255, 255, 255); */
-}
-
-.compItem{
-    display: flex;
-    margin-bottom: 8px;
-    color: #cacaca;
-    align-items: baseline;
-}
-
-.compare .upgrade{
-    display: flex;
-    justify-content: space-between;
-}
-
-.compare p{
-    margin-bottom: 32px;
-    padding: 0 18px;
-    color:#012064;
-}
-
-.upgrade p{
-    margin-bottom: 8px;
-}
-
-/* 航班細節overlay-------------------------------- */
-
-.flightDetail{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,.5);
-    backdrop-filter: blur(1px);
-    position: fixed;
-    left: 0;
-    top: 0;
-
-    display: none;
-}
-
-.flightDetail .popup{
-    width: 774px;
-    /* height: 326px; */
-    background-color: #fff;
-    border-radius: 16px;
-    padding: 48px 44px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: relative;
-}
-
-.popup > i {
-    position: absolute;
-    font-size: 32px;
-    color: #223F9A;
-    top: 8px;
-    right: 8px;
-    margin: 0;
-    cursor: pointer;
-}
-
-.flightDetail .title{
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-bottom: 8px;
-    color: #012064;
-}
-
-.flightDetail .content{
-    background-color: #F1F6FF;
-    border-radius: 8px;
-    padding: 24px 34px 40px 34px;
-}
-
-.flightDetail .top{
-    display: flex;
-    margin-bottom: 36px;
-    color: #898989;
-    justify-content: space-between;
-}
-
-.flightDetail .airline{
-    display: flex;
-    font-weight: bold;
-    color: #012064;
-}
-
-.flightDetail img{
-    height: 16px;
-}
-
-.flightDetail .bottom{
-    display: flex;
-    margin: 0 auto;
-    /* width: 618px; */
-}
-
-.flightDetail .bottom div{
-    /* margin: 0 30px; */
-    flex-grow: 1;
-}
-
-.flightDetail .bottom h5{
-    color: #898989;
-}
-
-.flightDetail h2{
-    color: #223F9A;
-    margin-bottom: 4px;
-}
-
-.flightDetail .bottom h5{
-    color: #898989;
-}
-
-.flightDetail .right{
-    max-width: 90px;
-}
-
-.flightDetail .depart > :nth-child(2){
-    margin-bottom: 8px;
-}
-
-.flightDetail .arrive > :nth-child(2){
-    margin-bottom: 8px;
-}
-
-.flightDetail .trip{
-    margin-top: 12px;
-    flex-grow: 2;
-    width: 100%;
-}
-
-.flightDetail .trip .time{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.flightDetail .trip .line{
-    margin: 0;
-    width: 100%;
-}
-
-.flightDetail .arrive{
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-end;
-    min-width: 140px;
-}
-
-/* popup手機版----------------------------------- */
-.bottomMobile{
-    display: flex;
-    display: none;
-    justify-content: center ;
-    gap: 16px;
-}
-
-.left .time{
-    display: flex;
-    margin-bottom: 0;
-}
-
-.bottomMobile .left{
-    text-align: right;
-}
-
-.bottomMobile .left :nth-child(1){
-    margin-bottom: 40px;
-}
-
-
-.bottomMobile .middle{
-    width: 4px;
-    margin-bottom: 16px;
-    border-radius: 4px;
-    background-color: #7488C2;
-}
-
-.bottomMobile .depart{
-    margin-bottom: 80px;
-}
-
-.bottomMobile .arrive{
-    text-align-last: left;
-    align-items: flex-start;
-}
-
+ 
 /* footer----------------------------------------- */
 footer{
     background-color: #304296;
